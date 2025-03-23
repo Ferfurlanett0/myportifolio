@@ -1,0 +1,658 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --neon-cyan: #0ff;
+    --neon-pink: #f0f;
+    --bg-color: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Floating header */
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.header-title {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Hero section */
+.hero {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.profile-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background: var(--glass);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(
+        var(--neon-cyan),
+        var(--neon-pink),
+        var(--neon-cyan)
+    );
+    /* animation: rotate 4s linear infinite; */
+}
+
+.profile-card img {
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    object-fit: cover;
+    border-radius: 18px;
+    z-index: 1;
+    object-position:top ;
+}
+
+.content {
+    padding: 2.6rem;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-button {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+.neon-button:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-color);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Project grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7.5rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+  background: var(--glass);  /* O fundo semitransparente */
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, backdrop-filter 0.3s ease;  /* Transições suaves */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 300px;
+  position: relative; /* Necessário para o posicionamento absoluto do 'Coming Soon' */
+  backdrop-filter: none;  /* Sem blur inicialmente */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+.neon-button a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.project-title {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    animation:  6s ease-in-out infinite;
+    display: flex;  
+    justify-content: center;
+    padding-top: 50px;
+    
+}
+
+[tilulo-projeto]{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+}
+
+#churrascaria_img{
+    object-fit: cover;
+    width: 96%;
+    height: 96%;
+    border: 3px solid rgba(0,0,0,0.4);
+    border-radius: 5%;
+}
+
+.linguagens img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    
+}
+
+.linguagens{
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.container_projects {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os quadrados quebrem para a próxima linha em telas menores */
+    gap: 20px; /* Adiciona espaçamento entre os quadrados */
+    
+}
+
+#my-projects{
+    caret-color: transparent;
+}
+
+.titulo_cards{
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-card-projects {
+  background: var(--glass);  /* O fundo semitransparente */
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, backdrop-filter 0.3s ease;  /* Transições suaves */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 350px;
+  position: relative; /* Necessário para o posicionamento absoluto do 'Coming Soon' */
+  backdrop-filter: none;  /* Sem blur inicialmente */
+  min-height: 300px;
+}
+
+
+.project-card-projects:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.credentials {
+    max-width: 1230px;
+    color: #fff;
+    background-color: #0a0a0a;
+    padding-bottom: 1px;
+    margin: 0 auto 47px;
+    
+  }
+  
+  .credentials-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
+    cursor: default;
+  }
+  
+  .credentials-label {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: rgb(96, 165, 250);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+   
+  }
+  
+  .credentials-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 16px;
+    background-image: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(0, 255, 255, 0.3) 0 0 20px;
+    animation: float 6s ease-in-out infinite;
+    
+  }
+  
+  .credentials-divider {
+    width: 96px;
+    height: 4px;
+    margin-top: 24px;
+    border-radius: 9999px;
+    background-image: linear-gradient(
+      to right,
+      rgb(96, 165, 250),
+      rgb(147, 51, 234)
+    );
+  }
+  
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    padding: 0 21px 82px;
+    margin-right: 16px;
+    margin-bottom: 41px;
+  }
+  
+  .credential-card {
+    animation: fade-in-up 0.5s cubic-bezier(0, 0, 0.2, 1);
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: rgba(0, 255, 255, 0.1) 0 0 20px;
+    overflow: hidden;
+    padding: 32px;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+    transform: translateY(20px);
+    cursor: pointer;
+    caret-color: transparent;
+  }
+  
+  .credential-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .credential-icon-wrapper.purple {
+    background-color: rgba(168, 85, 247, 0.1);
+  }
+  
+  .credential-icon-wrapper.blue {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  .credential-icon-wrapper.cyan {
+    background-color: rgba(6, 182, 212, 0.1);
+  }
+  
+  .credential-icon-wrapper.pink {
+    background-color: rgba(236, 72, 153, 0.1);
+  }
+  
+  .credential-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .credential-icon-wrapper.purple .credential-icon {
+    color: rgb(192, 132, 252);
+  }
+  
+  .credential-icon-wrapper.blue .credential-icon {
+    color: rgb(96, 165, 250);
+  }
+  
+  .credential-icon-wrapper.cyan .credential-icon {
+    color: rgb(34, 211, 238);
+  }
+  
+  .credential-icon-wrapper.pink .credential-icon {
+    color: rgb(244, 114, 182);
+  }
+  
+  .credential-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .credential-subtitle {
+    color: rgb(156, 163, 175);
+    margin-bottom: 16px;
+  }
+  
+  .credential-meta {
+    display: flex;
+    align-items: center;
+    color: rgb(107, 114, 128);
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .credential-meta .separator {
+    margin: 0 8px;
+  }
+  
+  .credential-list {
+    margin-bottom: 24px;
+  }
+  
+  .credential-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+  
+  .credential-list-item:first-child {
+    margin-top: 0;
+  }
+  
+  .check-icon {
+    width: 24px;
+    height: 24px;
+    color: rgb(74, 222, 128);
+    margin-right: 8px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  .credential-list-item span {
+    color: rgb(209, 213, 219);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .credential-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(96, 165, 250);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .credential-link:hover {
+    color: rgb(147, 197, 253);
+  }
+  
+  .external-link-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .credentials-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .credentials-grid {
+      grid-template-columns: minmax(0, 1fr);
+      padding-right: 3px;
+    }
+  
+    .credentials-title {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+  
+  .credential-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 1024px) {
+  .projects {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+      gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+      grid-template-columns: 1fr; /* Apenas 1 coluna para celulares */
+      gap: 1rem;
+  }
+}
+
+
+.card-blur {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  backdrop-filter: none;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+.card-content {
+  position: absolute;
+  z-index: 1; /* Garante que o conteúdo esteja acima do "X" */
+  top: 20px; /* Distância do topo do card */
+  text-align: center; /* Centraliza o texto dentro da área */
+  width: 100%; /* Faz o conteúdo ocupar toda a largura do card */
+}
+
+.card-blur::before {
+  content: "✖";
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o "X" */
+}
+
+.project-card-projects .card-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-card-projects:hover .card-content {
+  opacity: 0;  /* Torna o conteúdo invisível */
+  visibility: hidden;  /* Oculta o conteúdo visualmente */
+}
+
+/* Centraliza o "Coming Soon" no meio do card */
+.coming-soon {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  opacity: 0;  /* Começa invisível */
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Garante que o "Coming Soon" fique acima do fundo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Centraliza no meio do card */
+  text-align: center;
+  caret-color: transparent;
+}
+/* Aplica o efeito de blur, cursor proibido e exibe o "Coming Soon" */
+.card-blur:hover {
+  backdrop-filter: blur(10px);  /* Aplica o blur no hover */
+  cursor: not-allowed;  /* Aplica o cursor de "proibido" */
+  content: hidden;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Exemplo de efeito de aumento no hover */
+}
+
+.project-card-projects:hover .coming-soon {
+  opacity: 1;  /* Torna "Coming Soon" visível */
+}
+
+.project-card-projects:hover {
+  transform: scale(1.05); /* Exemplo de efeito de aumento no hover */
+}
+
+
+.card-blur:hover::before {
+  opacity: 0;
+}
+
+.site-footer {
+  padding: 48px 16px;
+  color: rgb(156, 163, 175);
+  background-color: transparent;
+}
+
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1152px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(156, 163, 175);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-link.github:hover {
+  color: #6e5494;
+}
+
+.social-link.email:hover {
+  color: #ea4335;
+}
+
+.copyright {
+  color: rgb(156, 163, 175);
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .social-links {
+    gap: 16px;
+  }
+}
