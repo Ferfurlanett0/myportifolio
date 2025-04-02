@@ -250,6 +250,7 @@ header {
   position: relative; /* Necessário para o posicionamento absoluto do 'Coming Soon' */
   backdrop-filter: none;  /* Sem blur inicialmente */
   min-height: 300px;
+  cursor: pointer;
 }
 
 
