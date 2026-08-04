@@ -4,6 +4,16 @@ const nav = document.querySelector('[data-nav]');
 const navLinks = [...document.querySelectorAll('.main-nav a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const techTrack = document.querySelector('[data-tech-track]');
+const techGroup = document.querySelector('[data-tech-group]');
+
+if (techTrack && techGroup && !reduceMotion.matches) {
+  const clonedGroup = techGroup.cloneNode(true);
+  clonedGroup.removeAttribute('data-tech-group');
+  clonedGroup.setAttribute('aria-hidden', 'true');
+  techTrack.append(clonedGroup);
+  requestAnimationFrame(() => techTrack.classList.add('ready'));
+}
 
 function updateHeader() {
   header?.classList.toggle('scrolled', window.scrollY > 20);
