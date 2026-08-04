@@ -931,10 +931,12 @@ export async function mountHeroScene({ canvas, sceneElement, reduceMotion }) {
     disposed = true;
     stopLoop();
     sceneElement.classList.remove('is-webgl-ready');
+    sceneElement.classList.add('is-static-fallback');
   }, { once: true });
 
   resize();
   render(0, 0);
+  sceneElement.classList.remove('is-static-fallback');
   sceneElement.classList.add('is-webgl-ready');
   if (!reduceMotion.matches) startLoop();
 }

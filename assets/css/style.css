@@ -336,6 +336,22 @@ p, h1, h2, h3 { margin-top: 0; }
   contain: layout style;
 }
 
+.hero-scene::before {
+  position: absolute;
+  z-index: 0;
+  inset: 4% 0 0 8%;
+  background:
+    radial-gradient(circle at 57% 52%, rgba(37,99,235,.13), rgba(124,58,237,.055) 30%, transparent 63%),
+    linear-gradient(rgba(37,99,235,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,.022) 1px, transparent 1px);
+  background-size: auto, 54px 54px, 54px 54px;
+  opacity: .72;
+  -webkit-mask-image: radial-gradient(ellipse at 58% 54%, #000 8%, transparent 73%);
+  mask-image: radial-gradient(ellipse at 58% 54%, #000 8%, transparent 73%);
+  content: "";
+  transition: opacity .35s ease;
+}
+
 .hero-canvas,
 .hero-scene-poster,
 .hero-scene-poster img,
@@ -360,6 +376,9 @@ p, h1, h2, h3 { margin-top: 0; }
   transition: opacity .45s ease;
 }
 
+.js .hero-scene-poster { opacity: 0; }
+.js .hero-scene.is-static-fallback .hero-scene-poster { opacity: 1; }
+
 .hero-scene-poster img {
   object-fit: cover;
   object-position: 72% 50%;
@@ -370,6 +389,8 @@ p, h1, h2, h3 { margin-top: 0; }
 
 .hero-scene.is-webgl-ready .hero-canvas { opacity: 1; }
 .hero-scene.is-webgl-ready .hero-scene-poster { opacity: 0; }
+.hero-scene.is-webgl-ready::before,
+.hero-scene.is-static-fallback::before { opacity: 0; }
 
 .scene-vignette {
   z-index: 2;

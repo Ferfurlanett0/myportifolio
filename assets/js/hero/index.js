@@ -5,13 +5,19 @@ const compactViewport = window.matchMedia('(max-width: 480px)');
 const saveData = navigator.connection?.saveData === true;
 
 async function startHeroScene() {
-  if (!sceneElement || !canvas || compactViewport.matches || saveData) return;
+  if (!sceneElement || !canvas) return;
+
+  if (compactViewport.matches || saveData) {
+    sceneElement.classList.add('is-static-fallback');
+    return;
+  }
 
   try {
-    const { mountHeroScene } = await import('./scene.js?v=20260804-2');
+    const { mountHeroScene } = await import('./scene.js?v=20260804-3');
     await mountHeroScene({ canvas, sceneElement, reduceMotion });
   } catch (error) {
     sceneElement.classList.remove('is-webgl-ready');
+    sceneElement.classList.add('is-static-fallback');
     console.warn('A experiência 3D não pôde ser iniciada; exibindo a arte estática.', error);
   }
 }
