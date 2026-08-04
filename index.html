@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -13,8 +13,17 @@
   <meta property="og:image" content="https://ferfurlanett0.github.io/myportifolio/assets/images/hero-background.png">
   <title>Fernando Furlanetto | Full Stack Developer</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260804-9">
-  <script src="assets/js/script.js?v=20260804-4" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260804-10">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./assets/vendor/three/three.module.min.js",
+        "three/addons/": "./assets/vendor/three/addons/"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/hero/index.js?v=20260804-1"></script>
+  <script src="assets/js/script.js?v=20260804-5" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -51,16 +60,16 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-shell">
         <div class="hero-content">
-          <p class="eyebrow reveal" style="--delay: .04s"><span></span> Olá, eu sou</p>
-          <h1 id="hero-title" class="reveal" style="--delay: .1s">
+          <p class="eyebrow reveal reveal-delay-1"><span></span> Olá, eu sou</p>
+          <h1 id="hero-title" class="reveal reveal-delay-2">
             <span>Fernando</span>
             <strong>Furlanetto</strong>
           </h1>
-          <p class="role reveal" style="--delay: .16s">Desenvolvedor <strong>Full Stack</strong></p>
-          <p class="hero-description reveal" style="--delay: .22s">
+          <p class="role reveal reveal-delay-3">Desenvolvedor <strong>Full Stack</strong></p>
+          <p class="hero-description reveal reveal-delay-4">
             Desenvolvo soluções completas para a web, de interfaces intuitivas ao back-end, integrações e bancos de dados. Transformo ideias em aplicações reais.
           </p>
-          <div class="hero-actions reveal" style="--delay: .29s">
+          <div class="hero-actions reveal reveal-delay-5">
             <a class="button button-primary" href="#projetos">
               Ver projetos
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -71,7 +80,7 @@
             </a>
           </div>
 
-          <div class="find-me reveal" style="--delay: .36s">
+          <div class="find-me reveal reveal-delay-6">
             <p>Me encontre</p>
             <div class="social-row">
               <a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Fernando Furlanetto">
@@ -88,130 +97,39 @@
         </div>
 
         <div class="hero-scene" aria-hidden="true" data-hero-scene>
-          <div class="scene-grid">
-            <i class="scene-node node-1"></i>
-            <i class="scene-node node-2"></i>
-            <i class="scene-node node-3"></i>
-            <i class="scene-node node-4"></i>
-            <i class="scene-node node-5"></i>
-            <i class="scene-node node-6"></i>
-          </div>
+          <picture class="hero-scene-poster" data-hero-poster>
+            <source srcset="assets/images/hero-background.webp" type="image/webp">
+            <img src="assets/images/hero-background.png" alt="" width="1672" height="941" fetchpriority="high">
+          </picture>
 
-          <div class="scene-ambient"></div>
+          <canvas class="hero-canvas" data-hero-canvas></canvas>
+          <div class="scene-vignette"></div>
 
-          <svg class="scene-network" viewBox="0 0 880 620" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="network-gradient" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#00d9ff" stop-opacity="0"/>
-                <stop offset=".25" stop-color="#0ea5e9"/>
-                <stop offset=".7" stop-color="#4f46e5"/>
-                <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <g class="network-lines">
-              <path d="M18 252 H142 L202 201 H331"/>
-              <path d="M72 382 H184 L244 323 H366"/>
-              <path d="M93 143 H226 L284 103 H418"/>
-              <path d="M473 102 H602 L669 158 H850"/>
-              <path d="M526 214 H654 L716 267 H872"/>
-              <path d="M514 425 H650 L713 367 H865"/>
-              <path d="M82 511 H228 L295 464 H420"/>
-            </g>
-            <g class="network-energy">
-              <path d="M18 252 H142 L202 201 H331"/>
-              <path d="M473 102 H602 L669 158 H850"/>
-              <path d="M514 425 H650 L713 367 H865"/>
-            </g>
-            <g class="network-dots">
-              <circle cx="142" cy="252" r="4"/><circle cx="202" cy="201" r="3"/>
-              <circle cx="184" cy="382" r="3"/><circle cx="244" cy="323" r="4"/>
-              <circle cx="226" cy="143" r="3"/><circle cx="284" cy="103" r="4"/>
-              <circle cx="602" cy="102" r="4"/><circle cx="669" cy="158" r="3"/>
-              <circle cx="654" cy="214" r="3"/><circle cx="716" cy="267" r="4"/>
-              <circle cx="650" cy="425" r="4"/><circle cx="713" cy="367" r="3"/>
-              <circle cx="228" cy="511" r="4"/><circle cx="295" cy="464" r="3"/>
-            </g>
-          </svg>
-
-          <div class="scene-beacons">
-            <i class="beacon-1"></i><i class="beacon-2"></i><i class="beacon-3"></i>
-            <i class="beacon-4"></i><i class="beacon-5"></i>
-          </div>
-
-          <div class="scene-particles">
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-
-          <span class="tech-glyph glyph-code">&lt;/&gt;</span>
-          <span class="tech-glyph glyph-braces">{ }</span>
-          <span class="tech-glyph glyph-data">DB</span>
-          <span class="scene-tech-icon scene-react"><img src="assets/icons/react.svg" alt="" width="24" height="24"></span>
-          <span class="scene-tech-icon scene-python"><img src="assets/icons/python.svg" alt="" width="24" height="24"></span>
-
-          <div class="code-panel code-panel-left">
-            <span>function <b>solveProblem</b>() {</span>
-            <span>&nbsp;&nbsp;const idea = <em>"transformar"</em>;</span>
-            <span>&nbsp;&nbsp;const dedication = <em>true</em>;</span>
-            <span>&nbsp;&nbsp;const result = <b>evolve</b>(idea);</span>
-            <span>&nbsp;&nbsp;return result;</span>
-            <span>}</span>
-          </div>
-
-          <div class="code-panel code-panel-right">
-            <span>const stack = {</span>
-            <span>&nbsp;&nbsp;frontend: [<em>"React"</em>, <em>"TypeScript"</em>],</span>
-            <span>&nbsp;&nbsp;backend: [<em>"Python"</em>],</span>
-            <span>&nbsp;&nbsp;database: [<em>"MySQL"</em>]</span>
-            <span>};</span>
-          </div>
-
-          <i class="floating-cube cube-a"></i>
-          <i class="floating-cube cube-b"></i>
-          <i class="floating-cube cube-c"></i>
-          <i class="floating-cube cube-d"></i>
-          <i class="floating-cube cube-e"></i>
-
-          <div class="hero-object" data-hero-object>
-            <div class="object-halo"></div>
-            <div class="platform-stack">
-              <div class="platform-layer platform-bottom"></div>
-              <div class="platform-layer platform-middle">
-                <svg class="platform-led-map" viewBox="0 0 530 190" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="platform-led-gradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0" stop-color="#00d9ff"/>
-                      <stop offset=".45" stop-color="#168cff"/>
-                      <stop offset=".76" stop-color="#7650ff"/>
-                      <stop offset="1" stop-color="#c13cff"/>
-                    </linearGradient>
-                  </defs>
-                  <path class="platform-led-glow" d="M 0 81 L 265 162 L 530 81"/>
-                  <path class="platform-led-base" d="M 0 81 L 265 162 L 530 81"/>
-                  <path class="platform-led-current current-one" pathLength="100" d="M 0 81 L 265 162 L 530 81"/>
-                  <path class="platform-led-current current-two" pathLength="100" d="M 0 81 L 265 162 L 530 81"/>
-                </svg>
-              </div>
-              <div class="platform-layer platform-top">
-                <span class="platform-core"></span>
-                <span class="platform-trace trace-left"></span>
-                <span class="platform-trace trace-right"></span>
-              </div>
+          <div class="scene-panel scene-panel-left" data-scene-panel data-depth="-0.65">
+            <div class="code-panel">
+              <span>function <b>solveProblem</b>() {</span>
+              <span>&nbsp;&nbsp;const idea = <em>"transformar"</em>;</span>
+              <span>&nbsp;&nbsp;const dedication = <em>true</em>;</span>
+              <span>&nbsp;&nbsp;return <b>buildSolution</b>(idea);</span>
+              <span>}</span>
             </div>
+          </div>
 
-            <div class="developer-cube">
-              <div class="cube-face cube-front"><span><b>&lt;</b><i>/</i><b>&gt;</b></span></div>
-              <div class="cube-face cube-back"></div>
-              <div class="cube-face cube-right"></div>
-              <div class="cube-face cube-left"></div>
-              <div class="cube-face cube-top"></div>
-              <div class="cube-face cube-bottom"></div>
+          <div class="scene-panel scene-panel-right" data-scene-panel data-depth="0.8">
+            <div class="code-panel">
+              <span>const stack = {</span>
+              <span>&nbsp;&nbsp;frontend: [</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;<em>"React"</em>, <em>"TypeScript"</em></span>
+              <span>&nbsp;&nbsp;],</span>
+              <span>&nbsp;&nbsp;backend: [<em>"Python"</em>],</span>
+              <span>&nbsp;&nbsp;database: [<em>"MySQL"</em>]</span>
+              <span>};</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="tech-shell reveal" style="--delay: .44s" aria-labelledby="tech-title">
+      <div class="tech-shell reveal reveal-delay-7" role="group" aria-labelledby="tech-title">
         <p id="tech-title">Tecnologias que utilizo</p>
         <div class="tech-marquee" data-tech-marquee>
           <div class="tech-track" data-tech-track>
@@ -247,7 +165,7 @@
           <div class="about-points">
             <div><strong>Full Stack</strong><span>Visão completa da solução</span></div>
             <div><strong>2 graduações</strong><span>Ciência da Computação e ADS</span></div>
-            <div><strong>Suporte & Infra</strong><span>Sistemas, redes e segurança</span></div>
+            <div><strong>Suporte &amp; Infra</strong><span>Sistemas, redes e segurança</span></div>
           </div>
         </div>
       </div>
@@ -261,7 +179,7 @@
         </header>
 
         <div class="featured-project compry-featured reveal-on-scroll">
-          <div class="compry-visual" aria-label="Identidade visual do Compry App">
+          <div class="compry-visual">
             <div class="compry-grid" aria-hidden="true"></div>
             <div class="compry-orbit compry-orbit-one" aria-hidden="true"></div>
             <div class="compry-orbit compry-orbit-two" aria-hidden="true"></div>
@@ -281,7 +199,7 @@
               <li>Checklist em tempo real com histórico e progresso</li>
               <li>Modo offline, sincronização automática e notificações</li>
             </ul>
-            <ul class="tag-list" aria-label="Tecnologias do projeto"><li>Flutter</li><li>Dart</li><li>Firebase</li><li>Riverpod</li><li>Hive</li></ul>
+            <ul class="tag-list"><li>Flutter</li><li>Dart</li><li>Firebase</li><li>Riverpod</li><li>Hive</li></ul>
             <div class="project-links">
               <a href="https://compry-app.vercel.app" target="_blank" rel="noopener noreferrer">Abrir aplicativo <span aria-hidden="true">↗</span></a>
               <a href="https://github.com/Ferfurlanett0/compry_APP" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a>
@@ -309,7 +227,7 @@
             <p class="project-number">02 / Aplicação web</p>
             <h3>Tempero Gaúcho</h3>
             <p>Website responsivo reconstruído com React e TypeScript, com hero imersivo, cardápio digital, galeria, localização e fluxo direto para reservas.</p>
-            <ul class="tag-list" aria-label="Tecnologias do projeto"><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
+            <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
             <div class="project-links">
               <a href="https://tempero-gaucho.vercel.app" target="_blank" rel="noopener noreferrer">Ver projeto <span aria-hidden="true">↗</span></a>
               <a href="https://github.com/Ferfurlanett0/sitechurrascaria_vercel" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
@@ -351,9 +269,9 @@
         </header>
         <div class="skill-grid">
           <article class="skill-card reveal-on-scroll"><span>01</span><h3>Front-end</h3><p>React, TypeScript, JavaScript, Tailwind CSS, HTML semântico e interfaces responsivas.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>02</span><h3>Back-end & dados</h3><p>Python, criação e integração de APIs, automações, MySQL e fundamentos de back-end.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>03</span><h3>Cloud & infraestrutura</h3><p>Docker, AWS, Oracle Cloud, Windows, redes LAN/WAN/WLAN, backup e segurança.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>04</span><h3>Produto & qualidade</h3><p>UX/UI, análise crítica, metodologias ágeis, suporte consultivo e garantia de qualidade.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>02</span><h3>Back-end &amp; dados</h3><p>Python, criação e integração de APIs, automações, MySQL e fundamentos de back-end.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>03</span><h3>Cloud &amp; infraestrutura</h3><p>Docker, AWS, Oracle Cloud, Windows, redes LAN/WAN/WLAN, backup e segurança.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>04</span><h3>Produto &amp; qualidade</h3><p>UX/UI, análise crítica, metodologias ágeis, suporte consultivo e garantia de qualidade.</p><div class="skill-line"></div></article>
         </div>
       </div>
     </section>
@@ -361,7 +279,7 @@
     <section class="section experience-section" id="experiencia" aria-labelledby="experience-title">
       <div class="section-shell">
         <header class="section-heading reveal-on-scroll">
-          <div><p class="section-kicker">Experiência & formação</p><h2 id="experience-title">Uma trajetória de <span>aprendizado contínuo</span></h2></div>
+          <div><p class="section-kicker">Experiência &amp; formação</p><h2 id="experience-title">Uma trajetória de <span>aprendizado contínuo</span></h2></div>
           <p>Experiência profissional em tecnologia, duas graduações e certificações que sustentam minha atuação técnica.</p>
         </header>
         <div class="timeline">

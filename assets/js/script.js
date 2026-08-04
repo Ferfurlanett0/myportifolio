@@ -7,39 +7,6 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const techTrack = document.querySelector('[data-tech-track]');
 const techGroup = document.querySelector('[data-tech-group]');
 const hero = document.querySelector('[data-hero]');
-const heroScene = document.querySelector('[data-hero-scene]');
-const heroObject = document.querySelector('[data-hero-object]');
-const finePointer = window.matchMedia('(pointer: fine)');
-
-if (hero && heroObject && finePointer.matches && !reduceMotion.matches) {
-  let sceneFrame;
-
-  const updateScene = (clientX, clientY) => {
-    const bounds = hero.getBoundingClientRect();
-    const normalizedX = Math.max(-1, Math.min(1, ((clientX - bounds.left) / bounds.width - .5) * 2));
-    const normalizedY = Math.max(-1, Math.min(1, ((clientY - bounds.top) / bounds.height - .5) * 2));
-
-    cancelAnimationFrame(sceneFrame);
-    sceneFrame = requestAnimationFrame(() => {
-      heroObject.style.setProperty('--scene-x', `${normalizedX * 10}px`);
-      heroObject.style.setProperty('--scene-y', `${normalizedY * 7}px`);
-      heroObject.style.setProperty('--scene-rx', `${normalizedY * -2.8}deg`);
-      heroObject.style.setProperty('--scene-ry', `${normalizedX * 4.8}deg`);
-    });
-  };
-
-  const resetScene = () => {
-    heroObject.classList.remove('is-interacting');
-    heroObject.style.setProperty('--scene-x', '0px');
-    heroObject.style.setProperty('--scene-y', '0px');
-    heroObject.style.setProperty('--scene-rx', '0deg');
-    heroObject.style.setProperty('--scene-ry', '0deg');
-  };
-
-  hero.addEventListener('pointerenter', () => heroObject.classList.add('is-interacting'));
-  hero.addEventListener('pointermove', (event) => updateScene(event.clientX, event.clientY));
-  hero.addEventListener('pointerleave', resetScene);
-}
 
 if (hero) {
   const sceneVisibilityObserver = new IntersectionObserver(([entry]) => {
