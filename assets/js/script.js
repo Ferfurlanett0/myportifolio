@@ -21,10 +21,10 @@ if (hero && heroObject && finePointer.matches && !reduceMotion.matches) {
 
     cancelAnimationFrame(sceneFrame);
     sceneFrame = requestAnimationFrame(() => {
-      heroObject.style.setProperty('--scene-x', `${normalizedX * 5}px`);
-      heroObject.style.setProperty('--scene-y', `${normalizedY * 4}px`);
-      heroObject.style.setProperty('--scene-rx', `${normalizedY * -1.8}deg`);
-      heroObject.style.setProperty('--scene-ry', `${normalizedX * 3}deg`);
+      heroObject.style.setProperty('--scene-x', `${normalizedX * 10}px`);
+      heroObject.style.setProperty('--scene-y', `${normalizedY * 7}px`);
+      heroObject.style.setProperty('--scene-rx', `${normalizedY * -2.8}deg`);
+      heroObject.style.setProperty('--scene-ry', `${normalizedX * 4.8}deg`);
     });
   };
 
