@@ -280,6 +280,7 @@ p, h1, h2, h3 { margin-top: 0; }
 .tech-marquee {
   overflow: hidden;
   margin-inline: -34px;
+  padding-block: 10px 14px;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
@@ -287,9 +288,12 @@ p, h1, h2, h3 { margin-top: 0; }
 .tech-track.ready { animation: tech-flow 42s linear infinite; }
 .tech-marquee:hover .tech-track { animation-play-state: paused; }
 .tech-group { display: flex; flex: 0 0 auto; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: clamp(46px, 5.5vw, 88px); padding: 0 44px; }
-.tech-group li { width: 76px; flex: 0 0 76px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: #c3cad6; font-size: .74rem; white-space: nowrap; transition: transform .25s, color .25s, filter .25s; }
-.tech-group li:hover { color: #fff; transform: translateY(-3px) scale(1.05); filter: drop-shadow(0 7px 13px rgba(37, 99, 235, .25)); }
-.tech-group img { width: 45px; height: 45px; object-fit: contain; }
+.tech-group li { position: relative; isolation: isolate; width: 76px; flex: 0 0 76px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: #c3cad6; font-size: .74rem; white-space: nowrap; transition: color .25s; }
+.tech-group li::before { position: absolute; z-index: -1; top: -10px; left: 50%; width: 70px; height: 70px; border: 1px solid rgba(96, 165, 250, .13); border-radius: 22px; background: radial-gradient(circle at 50% 42%, rgba(45, 212, 191, .2), rgba(59, 130, 246, .1) 46%, transparent 72%); content: ""; opacity: 0; transform: translateX(-50%) scale(.72); transition: opacity .28s ease, transform .28s ease, border-color .28s ease; }
+.tech-group li:hover { color: #fff; }
+.tech-group li:hover::before { border-color: rgba(96, 165, 250, .24); opacity: 1; transform: translateX(-50%) scale(1); }
+.tech-group img { position: relative; z-index: 1; width: 45px; height: 45px; object-fit: contain; transition: transform .28s cubic-bezier(.2,.8,.2,1), filter .28s ease; }
+.tech-group li:hover img { transform: translateY(-4px) scale(1.08); filter: drop-shadow(0 5px 8px rgba(56, 189, 248, .18)); }
 
 .section { position: relative; padding: clamp(90px, 9vw, 145px) 0; }
 .section::before { position: absolute; top: 0; left: 50%; width: min(calc(100% - 64px), var(--page-width)); height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); content: ""; transform: translateX(-50%); }
