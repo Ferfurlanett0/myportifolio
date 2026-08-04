@@ -59,7 +59,7 @@ function createCodeTexture() {
   context.textBaseline = 'middle';
   context.font = '800 154px ui-monospace, SFMono-Regular, Consolas, monospace';
   context.shadowColor = 'rgba(44, 125, 255, .86)';
-  context.shadowBlur = 8;
+  context.shadowBlur = 6;
   context.fillStyle = gradient;
   context.fillText('</>', canvas.width / 2, canvas.height / 2 + 4);
 
@@ -319,14 +319,14 @@ function createDeveloperCube({ allowShadows, glowTexture }) {
     new THREE.MeshBasicMaterial({
       map: codeTexture,
       transparent: true,
-      opacity: .08,
+      opacity: .06,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
       toneMapped: false,
     }),
   );
   symbolGlow.position.z = 1.402;
-  symbolGlow.scale.set(1.1, 1.1, 1);
+  symbolGlow.scale.set(1.07, 1.07, 1);
   symbolGlow.renderOrder = 5;
   group.add(symbolGlow);
 
@@ -343,16 +343,8 @@ function createDeveloperCube({ allowShadows, glowTexture }) {
   symbol.renderOrder = 6;
   group.add(symbol);
 
-  const faceGlow = createGlowSprite(glowTexture, COLORS.blue, .018, 2.55);
-  faceGlow.position.set(0, 0, 1.43);
-  group.add(faceGlow);
-
-  const symbolLight = new THREE.PointLight(COLORS.blue, 10, 3.4, 2);
-  symbolLight.position.set(0, 0, 1.9);
-  group.add(symbolLight);
-
   group.position.y = .45;
-  return { group, material, faceGlow };
+  return { group, material };
 }
 
 function createParticleField({ compact, lowPower }) {
@@ -842,7 +834,6 @@ export async function mountHeroScene({ canvas, sceneElement, reduceMotion }) {
     graph.developerCube.group.rotation.y = Math.sin(elapsed * .68) * .025;
     graph.developerCube.group.rotation.x = Math.cos(elapsed * .54) * .012;
     graph.developerCube.group.rotation.z = Math.sin(elapsed * .47) * .008;
-    graph.developerCube.faceGlow.material.opacity = .015 + (Math.sin(elapsed * 1.5) + 1) * .004;
     graph.platform.contactMaterial.opacity = .66 - cubeFloat * 1.35;
 
     graph.platform.ledUniforms.uTime.value = elapsed;
