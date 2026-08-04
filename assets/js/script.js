@@ -8,9 +8,10 @@ const techTrack = document.querySelector('[data-tech-track]');
 const techGroup = document.querySelector('[data-tech-group]');
 const hero = document.querySelector('[data-hero]');
 const heroScene = document.querySelector('[data-hero-scene]');
+const heroObject = document.querySelector('[data-hero-object]');
 const finePointer = window.matchMedia('(pointer: fine)');
 
-if (hero && heroScene && finePointer.matches && !reduceMotion.matches) {
+if (hero && heroObject && finePointer.matches && !reduceMotion.matches) {
   let sceneFrame;
 
   const updateScene = (clientX, clientY) => {
@@ -20,22 +21,22 @@ if (hero && heroScene && finePointer.matches && !reduceMotion.matches) {
 
     cancelAnimationFrame(sceneFrame);
     sceneFrame = requestAnimationFrame(() => {
-      heroScene.style.setProperty('--scene-x', `${normalizedX * 7}px`);
-      heroScene.style.setProperty('--scene-y', `${normalizedY * 5}px`);
-      heroScene.style.setProperty('--scene-rx', `${normalizedY * -2.2}deg`);
-      heroScene.style.setProperty('--scene-ry', `${normalizedX * 3.8}deg`);
+      heroObject.style.setProperty('--scene-x', `${normalizedX * 5}px`);
+      heroObject.style.setProperty('--scene-y', `${normalizedY * 4}px`);
+      heroObject.style.setProperty('--scene-rx', `${normalizedY * -1.8}deg`);
+      heroObject.style.setProperty('--scene-ry', `${normalizedX * 3}deg`);
     });
   };
 
   const resetScene = () => {
-    heroScene.classList.remove('is-interacting');
-    heroScene.style.setProperty('--scene-x', '0px');
-    heroScene.style.setProperty('--scene-y', '0px');
-    heroScene.style.setProperty('--scene-rx', '0deg');
-    heroScene.style.setProperty('--scene-ry', '0deg');
+    heroObject.classList.remove('is-interacting');
+    heroObject.style.setProperty('--scene-x', '0px');
+    heroObject.style.setProperty('--scene-y', '0px');
+    heroObject.style.setProperty('--scene-rx', '0deg');
+    heroObject.style.setProperty('--scene-ry', '0deg');
   };
 
-  hero.addEventListener('pointerenter', () => heroScene.classList.add('is-interacting'));
+  hero.addEventListener('pointerenter', () => heroObject.classList.add('is-interacting'));
   hero.addEventListener('pointermove', (event) => updateScene(event.clientX, event.clientY));
   hero.addEventListener('pointerleave', resetScene);
 }
