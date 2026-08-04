@@ -6,6 +6,50 @@ const sections = [...document.querySelectorAll('main section[id]')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const techTrack = document.querySelector('[data-tech-track]');
 const techGroup = document.querySelector('[data-tech-group]');
+const hero = document.querySelector('[data-hero]');
+const heroScene = document.querySelector('[data-hero-scene]');
+const finePointer = window.matchMedia('(pointer: fine)');
+
+if (hero && heroScene && finePointer.matches && !reduceMotion.matches) {
+  let sceneFrame;
+
+  const updateScene = (clientX, clientY) => {
+    const bounds = hero.getBoundingClientRect();
+    const normalizedX = Math.max(-1, Math.min(1, ((clientX - bounds.left) / bounds.width - .5) * 2));
+    const normalizedY = Math.max(-1, Math.min(1, ((clientY - bounds.top) / bounds.height - .5) * 2));
+
+    cancelAnimationFrame(sceneFrame);
+    sceneFrame = requestAnimationFrame(() => {
+      heroScene.style.setProperty('--scene-x', `${normalizedX * 7}px`);
+      heroScene.style.setProperty('--scene-y', `${normalizedY * 5}px`);
+      heroScene.style.setProperty('--scene-rx', `${normalizedY * -2.2}deg`);
+      heroScene.style.setProperty('--scene-ry', `${normalizedX * 3.8}deg`);
+    });
+  };
+
+  const resetScene = () => {
+    heroScene.classList.remove('is-interacting');
+    heroScene.style.setProperty('--scene-x', '0px');
+    heroScene.style.setProperty('--scene-y', '0px');
+    heroScene.style.setProperty('--scene-rx', '0deg');
+    heroScene.style.setProperty('--scene-ry', '0deg');
+  };
+
+  hero.addEventListener('pointerenter', () => heroScene.classList.add('is-interacting'));
+  hero.addEventListener('pointermove', (event) => updateScene(event.clientX, event.clientY));
+  hero.addEventListener('pointerleave', resetScene);
+}
+
+if (hero) {
+  const sceneVisibilityObserver = new IntersectionObserver(([entry]) => {
+    hero.classList.toggle('scene-paused', !entry.isIntersecting || document.hidden);
+  }, { threshold: .02 });
+
+  sceneVisibilityObserver.observe(hero);
+  document.addEventListener('visibilitychange', () => {
+    hero.classList.toggle('scene-paused', document.hidden || hero.getBoundingClientRect().bottom < 0);
+  });
+}
 
 if (techTrack && techGroup && !reduceMotion.matches) {
   const clonedGroup = techGroup.cloneNode(true);
