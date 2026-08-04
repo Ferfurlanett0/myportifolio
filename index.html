@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fernando Furlanetto, desenvolvedor Full Stack Júnior, bacharel em Ciência da Computação e tecnólogo em Análise e Desenvolvimento de Sistemas.">
+  <meta name="description" content="Desenvolvedor Full Stack focado na criação de aplicações web modernas, interfaces intuitivas e soluções completas do front-end ao back-end.">
   <meta name="theme-color" content="#030712">
+  <link rel="canonical" href="https://ferfurlanett0.github.io/myportifolio/">
   <meta property="og:title" content="Fernando Furlanetto | Full Stack Developer">
   <meta property="og:description" content="Desenvolvedor Full Stack focado na criação de aplicações web modernas e soluções completas.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/hero-background.png">
+  <meta property="og:url" content="https://ferfurlanett0.github.io/myportifolio/">
+  <meta property="og:image" content="https://ferfurlanett0.github.io/myportifolio/assets/images/hero-background.png">
   <title>Fernando Furlanetto | Full Stack Developer</title>
-  <link rel="preload" as="image" href="assets/images/hero-background.png">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260804-6">
-  <script src="assets/js/script.js?v=20260804-1" defer></script>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/hero-background.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260804-7">
+  <script src="assets/js/script.js?v=20260804-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -45,21 +48,38 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-art" aria-hidden="true"></div>
+    <section class="hero" id="inicio" aria-labelledby="hero-title" data-hero>
+      <div class="hero-scene" aria-hidden="true" data-hero-scene>
+        <img class="hero-art" src="assets/images/hero-background.webp" alt="" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async">
+        <svg class="hero-led-map" viewBox="0 0 1672 943" preserveAspectRatio="xMidYMin meet">
+          <defs>
+            <linearGradient id="hero-led-gradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#00d9ff"/>
+              <stop offset=".38" stop-color="#168cff"/>
+              <stop offset=".7" stop-color="#6d4aff"/>
+              <stop offset="1" stop-color="#b33cff"/>
+            </linearGradient>
+          </defs>
+          <path class="hero-led-glow" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
+          <path class="hero-led-base" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
+          <path class="hero-led-current" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
+          <path class="hero-led-spark" d="M 850 603 L 1100 704 L 1407 625"/>
+        </svg>
+        <div class="scene-depth-label"><span></span> Sistemas Full Stack</div>
+      </div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-shell">
         <div class="hero-content">
-          <p class="eyebrow reveal" style="--delay: .05s"><span></span> Olá, eu sou</p>
-          <h1 id="hero-title" class="reveal" style="--delay: .12s">
+          <p class="eyebrow reveal" style="--delay: .04s"><span></span> Olá, eu sou</p>
+          <h1 id="hero-title" class="reveal" style="--delay: .1s">
             <span>Fernando</span>
             <strong>Furlanetto</strong>
           </h1>
-          <p class="role reveal" style="--delay: .2s">Desenvolvedor <strong>Full Stack</strong></p>
-          <p class="hero-description reveal" style="--delay: .28s">
-            Desenvolvedor Full Stack Júnior e Analista de Suporte, transformo desafios reais em aplicações funcionais com JavaScript, Python e tecnologias web modernas.
+          <p class="role reveal" style="--delay: .16s">Desenvolvedor <strong>Full Stack</strong></p>
+          <p class="hero-description reveal" style="--delay: .22s">
+            Desenvolvo soluções completas para a web, de interfaces intuitivas ao back-end, integrações e bancos de dados. Transformo ideias em aplicações reais.
           </p>
-          <div class="hero-actions reveal" style="--delay: .36s">
+          <div class="hero-actions reveal" style="--delay: .29s">
             <a class="button button-primary" href="#projetos">
               Ver projetos
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -70,7 +90,7 @@
             </a>
           </div>
 
-          <div class="find-me reveal" style="--delay: .44s">
+          <div class="find-me reveal" style="--delay: .36s">
             <p>Me encontre</p>
             <div class="social-row">
               <a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Fernando Furlanetto">
@@ -89,7 +109,7 @@
         <div class="hero-mobile-visual" aria-hidden="true"></div>
       </div>
 
-      <div class="tech-shell reveal" style="--delay: .52s" aria-labelledby="tech-title">
+      <div class="tech-shell reveal" style="--delay: .44s" aria-labelledby="tech-title">
         <p id="tech-title">Tecnologias que utilizo</p>
         <div class="tech-marquee" data-tech-marquee>
           <div class="tech-track" data-tech-track>
@@ -275,7 +295,7 @@
 
   <footer class="site-footer">
     <div class="section-shell footer-inner">
-      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando <strong>Furlanetto</strong></span></a>
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando <strong>Furlanetto</strong></span></a>
       <p>Projetado e desenvolvido com atenção aos detalhes.</p>
       <p>© <span data-year>2026</span> Fernando Furlanetto.</p>
     </div>
