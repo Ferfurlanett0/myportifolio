@@ -283,10 +283,10 @@ p, h1, h2, h3 { margin-top: 0; }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
-.tech-track { display: flex; width: max-content; }
+.tech-track { display: flex; flex-direction: row; flex-wrap: nowrap; width: max-content; }
 .tech-track.ready { animation: tech-flow 42s linear infinite; }
 .tech-marquee:hover .tech-track { animation-play-state: paused; }
-.tech-group { display: flex; align-items: center; gap: clamp(46px, 5.5vw, 88px); padding: 0 44px; }
+.tech-group { display: flex; flex: 0 0 auto; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: clamp(46px, 5.5vw, 88px); padding: 0 44px; }
 .tech-group li { width: 76px; flex: 0 0 76px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: #c3cad6; font-size: .74rem; white-space: nowrap; transition: transform .25s, color .25s, filter .25s; }
 .tech-group li:hover { color: #fff; transform: translateY(-3px) scale(1.05); filter: drop-shadow(0 7px 13px rgba(37, 99, 235, .25)); }
 .tech-group img { width: 45px; height: 45px; object-fit: contain; }
