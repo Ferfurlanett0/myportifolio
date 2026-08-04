@@ -13,9 +13,8 @@
   <meta property="og:image" content="https://ferfurlanett0.github.io/myportifolio/assets/images/hero-background.png">
   <title>Fernando Furlanetto | Full Stack Developer</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/images/hero-background.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260804-7">
-  <script src="assets/js/script.js?v=20260804-2" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260804-8">
+  <script src="assets/js/script.js?v=20260804-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -49,24 +48,6 @@
 
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="hero-title" data-hero>
-      <div class="hero-scene" aria-hidden="true" data-hero-scene>
-        <img class="hero-art" src="assets/images/hero-background.webp" alt="" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async">
-        <svg class="hero-led-map" viewBox="0 0 1672 943" preserveAspectRatio="xMidYMin meet">
-          <defs>
-            <linearGradient id="hero-led-gradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#00d9ff"/>
-              <stop offset=".38" stop-color="#168cff"/>
-              <stop offset=".7" stop-color="#6d4aff"/>
-              <stop offset="1" stop-color="#b33cff"/>
-            </linearGradient>
-          </defs>
-          <path class="hero-led-glow" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
-          <path class="hero-led-base" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
-          <path class="hero-led-current" stroke="url(#hero-led-gradient)" d="M 850 603 L 1100 704 L 1407 625"/>
-          <path class="hero-led-spark" d="M 850 603 L 1100 704 L 1407 625"/>
-        </svg>
-        <div class="scene-depth-label"><span></span> Sistemas Full Stack</div>
-      </div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-shell">
         <div class="hero-content">
@@ -106,7 +87,54 @@
           </div>
         </div>
 
-        <div class="hero-mobile-visual" aria-hidden="true"></div>
+        <div class="hero-scene" aria-hidden="true" data-hero-scene>
+          <div class="scene-grid">
+            <i class="scene-node node-1"></i>
+            <i class="scene-node node-2"></i>
+            <i class="scene-node node-3"></i>
+            <i class="scene-node node-4"></i>
+            <i class="scene-node node-5"></i>
+            <i class="scene-node node-6"></i>
+          </div>
+
+          <div class="code-panel code-panel-left">
+            <span>function <b>solveProblem</b>() {</span>
+            <span>&nbsp;&nbsp;const idea = <em>"transformar"</em>;</span>
+            <span>&nbsp;&nbsp;return <b>buildSolution</b>();</span>
+            <span>}</span>
+          </div>
+
+          <div class="code-panel code-panel-right">
+            <span>const stack = {</span>
+            <span>&nbsp;&nbsp;frontend: [<em>"React"</em>],</span>
+            <span>&nbsp;&nbsp;backend: [<em>"Python"</em>],</span>
+            <span>&nbsp;&nbsp;database: [<em>"MySQL"</em>]</span>
+            <span>};</span>
+          </div>
+
+          <i class="floating-cube cube-a"></i>
+          <i class="floating-cube cube-b"></i>
+          <i class="floating-cube cube-c"></i>
+
+          <div class="hero-object" data-hero-object>
+            <div class="platform-stack">
+              <div class="platform-layer platform-bottom"></div>
+              <div class="platform-layer platform-middle">
+                <span class="platform-led"><i></i></span>
+              </div>
+              <div class="platform-layer platform-top"></div>
+            </div>
+
+            <div class="developer-cube">
+              <div class="cube-face cube-front"><span><b>&lt;</b><i>/</i><b>&gt;</b></span></div>
+              <div class="cube-face cube-back"></div>
+              <div class="cube-face cube-right"></div>
+              <div class="cube-face cube-left"></div>
+              <div class="cube-face cube-top"></div>
+              <div class="cube-face cube-bottom"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="tech-shell reveal" style="--delay: .44s" aria-labelledby="tech-title">
