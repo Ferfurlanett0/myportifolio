@@ -1,806 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Design</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fernando Furlanetto, desenvolvedor Full Stack focado em aplicações web modernas, interfaces intuitivas e soluções completas.">
+  <meta name="theme-color" content="#030712">
+  <meta property="og:title" content="Fernando Furlanetto | Full Stack Developer">
+  <meta property="og:description" content="Desenvolvedor Full Stack focado na criação de aplicações web modernas e soluções completas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Imagem referencia.png">
+  <title>Fernando Furlanetto | Full Stack Developer</title>
+  <link rel="preload" as="image" href="Backgroun de fundo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="header-title">DEVELOPMENT PORTFOLIO</h1>
-        </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <section class="hero">
-            <div class="content">
-                <h2>Fernando Furlanetto</h2>
-                <p style="margin: 1.5rem 0; line-height: 1.6;">
-                  I am a Systems Analysis and Development graduate with professional expertise in graphic design. I have intermediate knowledge of HTML, CSS, and JavaScript, which are my primary development languages. I am proactive, adaptable, and always eager to learn. I believe that making mistakes is part of the learning process and that growth comes from both successes and challenges.
-                </p>
-                <button class="neon-button">
-                    <a href="#my-projects">Explore Projects →
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#inicio" aria-label="Fernando Furlanetto — início">
+        <span class="brand-mark" aria-hidden="true">FF</span>
+        <span class="brand-name">Fernando <strong>Furlanetto</strong></span>
+      </a>
 
-                </a>
-                </button>
-            </div>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
 
-            <div class="profile-card">
-                <img src="profile.png" alt="Profile">
-            </div>
-        </section>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal" data-nav>
+        <a href="#inicio" class="active">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-        <div class="projects">
-            <div class="project-card">
-                <h3>Photoshop Expertise</h3>
-                <p>High-quality graphic design for social media, thumbnails, and branding</p>
-            </div>
-            <div class="project-card">
-                <h3>HTML5 Structure</h3>
-                <p>Clean, semantic, and responsive web development foundation</p>
-            </div>
-            <div class="project-card">
-                <h3>CSS Styling</h3>
-                <p>Modern, visually appealing, and adaptable UI design</p>
-            </div>
-        </div>
+      <a class="header-cta" href="curriculo-fernando-furlanetto.pdf" download>
+        Baixar CV
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>
+      </a>
     </div>
+  </header>
 
-    <div titulo-proejto> 
-        <h1 class="project-title" id="my-projects"> 
-            My projects </h1>
-            <div class="container_projects">      
-              <div class="projects">
-                  <div class="project-card-projects">
-                      <h3 class="titulo_cards">Steakhouse Website</h3><br>
-                      <p><img id="churrascaria_img" src="site churrascaria.png" alt="site churrascaria"></p>
-                      <p class="linguagens"> Languages Used: <br>
-                          <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="html5">
-                          <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="css">
-                          <img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" alt="js">
-                      </p>
-                  </div>
-          
-                  <div class="project-card-projects card-blur">
-                      <div class="card-content">
-                          <h3 class="titulo_cards">Future Project</h3>
-                          <p class="linguagens">Space for Future Projects</p>
-                      </div>
-                      <span class="coming-soon">COMING SOON</span>
-                  </div>
-          
-                  <div class="project-card-projects card-blur">
-                      <div class="card-content">
-                          <h3 class="titulo_cards">Future Project</h3>
-                          <p class="linguagens">Space for Future Projects</p>
-                      </div>
-                      <span class="coming-soon">COMING SOON</span>
-                  </div>
-              </div> <!-- Fechando a div 'projects' -->
-          
-              <div class="projects">
-                  <div class="project-card-projects card-blur">
-                      <div class="card-content">
-                          <h3 class="titulo_cards">Future Project</h3>
-                          <p class="linguagens">Space for Future Projects</p>
-                      </div>
-                      <span class="coming-soon">COMING SOON</span>
-                  </div>
-          
-                  <div class="project-card-projects card-blur">
-                      <div class="card-content">
-                          <h3 class="titulo_cards">Future Project</h3>
-                          <p class="linguagens">Space for Future Projects</p>
-                      </div>
-                      <span class="coming-soon">COMING SOON</span>
-                  </div>
-          
-                  <div class="project-card-projects card-blur">
-                      <div class="card-content">
-                          <h3 class="titulo_cards">Future Project</h3>
-                          <p class="linguagens">Space for Future Projects</p>
-                      </div>
-                      <span class="coming-soon">COMING SOON</span>
-                  </div>
-              </div> <!-- Fechando a div 'projects' -->
-          </div> <!-- Fechando a div 'container_projects' -->
-          
-    </div>
-
-    <section class="credentials">
-        <header class="credentials-header">
-          <span class="credentials-label">CREDENTIALS</span>
-          <h2 class="credentials-title">Certificates & Education</h2>
-          <div class="credentials-divider"></div>
-        </header>
-      
-        <div class="credentials-grid">
-          <article class="credential-card">
-            <div class="credential-icon-wrapper purple">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
-                ></path>
-                <path d="M22 10v6"></path>
-                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-              </svg>
-            </div>
-            <h3 class="credential-title">Web Development with AngularJS</h3>
-            <p class="credential-subtitle">Full-Stack JavaScript Bootcamp</p>
-            <div class="credential-meta">
-              <span>Unicamp</span>
-              <span class="separator">•</span>
-              <span>2025</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>AngularJS Data Binding used $scope to sync 
-                  backend data with the UI dynamically
-
-                </span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Bootstrap & JavaScript enhanced interactivity with event listeners and components</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Responsive Design Applied Flexbox & Media Queries for mobile-friendly layouts</span>
-              </li>
-            </ul>
-            <a href="https://moocs.ggte.unicamp.br/certificate/yGCMfX9R" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-shell">
+        <div class="hero-content">
+          <p class="eyebrow reveal" style="--delay: .05s"><span></span> Olá, eu sou</p>
+          <h1 id="hero-title" class="reveal" style="--delay: .12s">
+            <span>Fernando</span>
+            <strong>Furlanetto</strong>
+          </h1>
+          <p class="role reveal" style="--delay: .2s">Desenvolvedor <strong>Full Stack</strong></p>
+          <p class="hero-description reveal" style="--delay: .28s">
+            Desenvolvo soluções completas para a web, unindo interfaces intuitivas, lógica de programação e uma base sólida em tecnologia para transformar ideias em aplicações reais.
+          </p>
+          <div class="hero-actions reveal" style="--delay: .36s">
+            <a class="button button-primary" href="#projetos">
+              Ver projetos
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-          </article>
-      
-          <article class="credential-card">
-            <div class="credential-icon-wrapper blue">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
-                ></path>
-                <circle cx="12" cy="8" r="6"></circle>
-              </svg>
-            </div>
-            <h3 class="credential-title">UX/UI Design</h3>
-            <p class="credential-subtitle">User Experience Design Certification</p>
-            <div class="credential-meta">
-              <span>Unicamp</span>
-              <span class="separator">•</span>
-              <span>2025</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>User Research & Wireframing</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Prototyping & Interaction Design</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Usability Testing & Iteration</span>
-              </li>
-            </ul>
-            <a href="https://moocs.ggte.unicamp.br/certificate/5_TgYYX8" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
-            </a>
-          </article>
-      
-          <article class="credential-card">
-            <div class="credential-icon-wrapper cyan">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
-                ></path>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-            </div>
-            <h3 class="credential-title">AWS Cloud</h3>
-            <p class="credential-subtitle">AWS Academy Cloud Foundations</p>
-            <div class="credential-meta">
-              <span>Amazon Web Services</span>
-              <span class="separator">•</span>
-              <span>2023</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Cloud Architecture & Services</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Security & Networking</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Deployment & Scaling Strategies</span>
-              </li>
-            </ul>
-            <a href="https://www.credly.com/badges/eccfbecf-fbdc-45de-b641-908317fd8c45/linked_in_profile" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
-            </a>
-          </article>
-      
-          <article class="credential-card">
-            <div class="credential-icon-wrapper pink">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
-                ></path>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-            </div>
-            <h3 class="credential-title">Technology in Systems Analysis and Development</h3>
-            <p class="credential-subtitle">Design, coding, optimization</p>
-            <div class="credential-meta">
-              <span>Centro Universitário Fundação de Ensino Octávio Bastos</span>
-              <span class="separator">•</span>
-              <span>2024</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Problem-solving, logic, algorithms</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Programming languages, databases, frameworks</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Systems design, testing, optimization</span>
-              </li>
-            </ul>
-            <a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.21a799ba4fcf" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
-            </a>
-          </article>
-      
-          <article class="credential-card">
-            <div class="credential-icon-wrapper purple">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
-                ></path>
-                <path d="M22 10v6"></path>
-                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-              </svg>
-            </div>
-            <h3 class="credential-title">Composition of Images</h3>
-            <p class="credential-subtitle">Analysis, design, development</p>
-            <div class="credential-meta">
-              <span>Escola Saga</span>
-              <span class="separator">•</span>
-              <span>2024</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Programming, problem-solving, algorithms</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Database management, systems design, testing</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Front-end, back-end, optimization</span>
-              </li>
-            </ul>
-            <a href="https://hub.saga.com.br/certificado?chave=528B1E92" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
-            </a>
-          </article>
-      
-          <article class="credential-card">
-            <div class="credential-icon-wrapper blue">
-              <svg
-                class="credential-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
-                ></path>
-                <circle cx="12" cy="8" r="6"></circle>
-              </svg>
-            </div>
-            <h3 class="credential-title">Android Programming</h3>
-            <p class="credential-subtitle">Comprehensive training in building modern Android apps</p>
-            <div class="credential-meta">
-              <span>Unicamp</span>
-              <span class="separator">•</span>
-              <span>2025 - In Progress</span>
-            </div>
-            <ul class="credential-list">
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Android UI Design, creating responsive and user-friendly interfaces</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Java Programming, building efficient and scalable Android applications</span>
-              </li>
-              <li class="credential-list-item">
-                <svg
-                  class="check-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 7 17l-5-5"></path>
-                  <path d="m22 10-7.5 7.5L13 16"></path>
-                </svg>
-                <span>Firebase Integration, implementing real-time databases and authentication</span>
-              </li>
-            </ul>
-            <a href="#" class="credential-link">
-              <span>View Certificate</span>
-              <svg
-                class="external-link-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 3h6v6"></path>
-                <path d="M10 14 21 3"></path>
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-              </svg>
-            </a>
-          </article>
-        </div>
-      </section>
-      
-      <footer class="site-footer">
-        <div class="footer-container">
-          <div class="social-links">
-            <a
-              href="https://linkedin.com/in/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link linkedin"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-                ></path>
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link github"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"
-                ></path>
-              </svg>
-              <span>GitHub</span>
-            </a>
-            <a href="mailto:your.email@example.com" class="social-link email">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                ></path>
-              </svg>
-              <span>Email</span>
+            <a class="button button-secondary" href="#sobre">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              Sobre mim
             </a>
           </div>
-          <p class="copyright">© 2023 Dev Portfolio. All rights reserved.</p>
-        </div>
-      </footer>
-      
-  ;
 
+          <div class="find-me reveal" style="--delay: .44s">
+            <p>Me encontre</p>
+            <div class="social-row">
+              <a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Fernando Furlanetto">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Fernando Furlanetto">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M8.3 18.5v-8.4H5.5v8.4h2.8M6.9 8.96a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24m11.6 9.54v-4.62c0-2.47-.53-4.37-3.42-4.37-1.39 0-2.32.76-2.7 1.49h-.04v-.89H9.66v8.39h2.79v-4.15c0-1.1.2-2.15 1.56-2.15 1.34 0 1.36 1.25 1.36 2.22v4.08h3.13Z"/></svg>
+              </a>
+              <a href="mailto:fernandopfurlanetto@gmail.com" aria-label="Enviar e-mail para Fernando Furlanetto">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mobile-visual" aria-hidden="true"></div>
+      </div>
+
+      <div class="tech-shell reveal" style="--delay: .52s" aria-labelledby="tech-title">
+        <p id="tech-title">Tecnologias que utilizo</p>
+        <ul class="tech-list">
+          <li><span class="tech-icon html">5</span>HTML</li>
+          <li><span class="tech-icon css">#</span>CSS</li>
+          <li><span class="tech-icon js">JS</span>JavaScript</li>
+          <li><span class="tech-icon angular">A</span>AngularJS</li>
+          <li><span class="tech-icon bootstrap">B</span>Bootstrap</li>
+          <li><span class="tech-icon java">J</span>Java</li>
+          <li><span class="tech-icon firebase">F</span>Firebase</li>
+          <li><span class="tech-icon aws">AWS</span>AWS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre" aria-labelledby="about-title">
+      <div class="section-shell about-grid">
+        <div class="portrait-wrap reveal-on-scroll">
+          <div class="portrait-frame"><img src="profile-optimized.jpg" alt="Fernando Furlanetto" loading="lazy" width="800" height="1000"></div>
+          <div class="portrait-chip"><span></span> Disponível para novos desafios</div>
+        </div>
+        <div class="about-copy reveal-on-scroll">
+          <p class="section-kicker">Sobre mim</p>
+          <h2 id="about-title">Tecnologia com <span>visão de design</span></h2>
+          <p>Sou formado em Análise e Desenvolvimento de Sistemas e também possuo experiência profissional em design gráfico. Essa combinação me ajuda a construir soluções que equilibram lógica, clareza e experiência de uso.</p>
+          <p>Tenho conhecimento em HTML, CSS e JavaScript, minhas principais linguagens de desenvolvimento, além de formação complementar em UX/UI, cloud e desenvolvimento de aplicações.</p>
+          <div class="about-points">
+            <div><strong>Full Stack</strong><span>Visão completa da solução</span></div>
+            <div><strong>UI/UX</strong><span>Interfaces claras e intuitivas</span></div>
+            <div><strong>Aprendizado</strong><span>Evolução técnica constante</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <header class="section-heading reveal-on-scroll">
+          <div><p class="section-kicker">Projetos</p><h2 id="projects-title">Ideias transformadas em <span>experiências reais</span></h2></div>
+          <p>Uma seleção do meu trabalho em desenvolvimento web e dos projetos que estão em construção.</p>
+        </header>
+
+        <div class="featured-project reveal-on-scroll">
+          <div class="project-image">
+            <img src="site churrascaria.png" alt="Tela do projeto de website para churrascaria" loading="lazy">
+            <span>Projeto em destaque</span>
+          </div>
+          <div class="project-copy">
+            <p class="project-number">01 / Desenvolvimento web</p>
+            <h3>Website de Churrascaria</h3>
+            <p>Projeto de site para churrascaria construído com estrutura semântica, estilização responsiva e interações em JavaScript.</p>
+            <ul class="tag-list" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+        </div>
+
+        <div class="future-grid">
+          <article class="future-card reveal-on-scroll"><span>02</span><div><p>Em desenvolvimento</p><h3>Próximo projeto</h3></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg></article>
+          <article class="future-card reveal-on-scroll"><span>03</span><div><p>Em desenvolvimento</p><h3>Novas ideias em breve</h3></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="section-shell">
+        <header class="section-heading centered reveal-on-scroll">
+          <div><p class="section-kicker">Competências</p><h2 id="skills-title">Construindo de ponta a ponta</h2></div>
+          <p>Conhecimentos comprovados pela formação, certificações e projetos presentes neste portfólio.</p>
+        </header>
+        <div class="skill-grid">
+          <article class="skill-card reveal-on-scroll"><span>01</span><h3>Front-end</h3><p>HTML semântico, CSS responsivo, JavaScript, AngularJS e Bootstrap.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>02</span><h3>Aplicações & dados</h3><p>Lógica de programação, Java, Firebase e fundamentos de bancos de dados.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>03</span><h3>Cloud & infraestrutura</h3><p>Fundamentos AWS, arquitetura, segurança, redes e estratégias de deployment.</p><div class="skill-line"></div></article>
+          <article class="skill-card reveal-on-scroll"><span>04</span><h3>Design & experiência</h3><p>Pesquisa, wireframes, prototipação, testes de usabilidade e design gráfico.</p><div class="skill-line"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experiencia" aria-labelledby="experience-title">
+      <div class="section-shell">
+        <header class="section-heading reveal-on-scroll">
+          <div><p class="section-kicker">Experiência & formação</p><h2 id="experience-title">Uma trajetória de <span>aprendizado contínuo</span></h2></div>
+          <p>Formação acadêmica e certificações verificáveis que sustentam minha atuação técnica.</p>
+        </header>
+        <div class="timeline">
+          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2025</div><div class="timeline-card"><p>Unicamp</p><h3>Desenvolvimento Web com AngularJS</h3><span>Full-Stack JavaScript Bootcamp</span><a href="https://moocs.ggte.unicamp.br/certificate/yGCMfX9R" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
+          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2025</div><div class="timeline-card"><p>Unicamp</p><h3>UX/UI Design</h3><span>Pesquisa, prototipação e testes de usabilidade</span><a href="https://moocs.ggte.unicamp.br/certificate/5_TgYYX8" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
+          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2024</div><div class="timeline-card"><p>UNIFEOB</p><h3>Análise e Desenvolvimento de Sistemas</h3><span>Graduação em tecnologia</span><a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.21a799ba4fcf" target="_blank" rel="noopener noreferrer">Ver diploma <span aria-hidden="true">↗</span></a></div></article>
+          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2024</div><div class="timeline-card"><p>Escola Saga</p><h3>Composição de Imagens</h3><span>Design e desenvolvimento visual</span><a href="https://hub.saga.com.br/certificado?chave=528B1E92" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
+          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2023</div><div class="timeline-card"><p>Amazon Web Services</p><h3>AWS Academy Cloud Foundations</h3><span>Arquitetura, serviços, segurança e redes</span><a href="https://www.credly.com/badges/eccfbecf-fbdc-45de-b641-908317fd8c45/linked_in_profile" target="_blank" rel="noopener noreferrer">Ver credencial <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="section-shell contact-card reveal-on-scroll">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <p class="section-kicker">Vamos conversar</p>
+        <h2 id="contact-title">Tem uma ideia? Vamos <span>construí-la juntos.</span></h2>
+        <p>Estou aberto a novos desafios, colaborações e oportunidades em desenvolvimento de software.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:fernandopfurlanetto@gmail.com">Enviar um e-mail <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="text-link" href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="curriculo-fernando-furlanetto.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando <strong>Furlanetto</strong></span></a>
+      <p>Projetado e desenvolvido com atenção aos detalhes.</p>
+      <p>© <span data-year>2026</span> Fernando Furlanetto.</p>
+    </div>
+  </footer>
 </body>
 </html>

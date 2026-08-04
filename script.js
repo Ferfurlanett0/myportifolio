@@ -1,0 +1,72 @@
+const header = document.querySelector('[data-header]');
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const nav = document.querySelector('[data-nav]');
+const navLinks = [...document.querySelectorAll('.main-nav a')];
+const sections = [...document.querySelectorAll('main section[id]')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function updateHeader() {
+  header?.classList.toggle('scrolled', window.scrollY > 20);
+}
+
+function closeMenu() {
+  if (!menuToggle || !nav) return;
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Abrir menu');
+  nav.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
+
+function toggleMenu() {
+  if (!menuToggle || !nav) return;
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+  nav.classList.toggle('open', !isOpen);
+  document.body.classList.toggle('menu-open', !isOpen);
+}
+
+menuToggle?.addEventListener('click', toggleMenu);
+navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMenu();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 960) closeMenu();
+});
+
+const activeSectionObserver = new IntersectionObserver((entries) => {
+  const visible = entries
+    .filter((entry) => entry.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+  if (!visible) return;
+  navLinks.forEach((link) => {
+    const isActive = link.getAttribute('href') === `#${visible.target.id}`;
+    link.classList.toggle('active', isActive);
+    if (isActive) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+}, { rootMargin: '-30% 0px -55%', threshold: [0, .15, .4] });
+
+sections.forEach((section) => activeSectionObserver.observe(section));
+
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+if (reduceMotion.matches) {
+  revealElements.forEach((element) => element.classList.add('visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -50px' });
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
+
+document.querySelector('[data-year]').textContent = new Date().getFullYear();
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
