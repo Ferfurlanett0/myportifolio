@@ -8,7 +8,7 @@ async function startHeroScene() {
   if (!sceneElement || !canvas || compactViewport.matches || saveData) return;
 
   try {
-    const { mountHeroScene } = await import('./scene.js?v=20260804-1');
+    const { mountHeroScene } = await import('./scene.js?v=20260804-2');
     await mountHeroScene({ canvas, sceneElement, reduceMotion });
   } catch (error) {
     sceneElement.classList.remove('is-webgl-ready');
