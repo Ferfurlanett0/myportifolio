@@ -398,12 +398,12 @@ p, h1, h2, h3 { margin-top: 0; }
 .timeline-item { position: relative; display: grid; grid-template-columns: 100px 1fr; gap: 70px; padding-bottom: 25px; }
 .timeline-item::before { position: absolute; top: 35px; left: 129px; width: 11px; height: 11px; border: 2px solid var(--blue); border-radius: 50%; background: var(--bg-primary); box-shadow: 0 0 16px rgba(37,99,235,.7); content: ""; }
 .timeline-date { padding-top: 31px; color: #64748b; font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-align: right; }
-.timeline-card { padding: 28px 32px; border: 1px solid var(--border); border-radius: var(--radius-md); background: rgba(255,255,255,.023); transition: border-color .3s, transform .3s; }
+.timeline-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 28px; padding: 28px 32px; border: 1px solid var(--border); border-radius: var(--radius-md); background: rgba(255,255,255,.023); transition: border-color .3s, transform .3s; }
 .timeline-card:hover { border-color: var(--border-hover); transform: translateX(4px); }
-.timeline-card > p { margin-bottom: 8px; color: #60a5fa; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.timeline-card h3 { margin-bottom: 8px; font-size: 1.14rem; }
-.timeline-card > span { display: block; color: var(--text-secondary); font-size: .82rem; line-height: 1.6; }
-.timeline-card a { display: inline-flex; align-items: center; gap: 5px; width: max-content; margin-top: 16px; color: #93c5fd; font-size: .76rem; transition: color .25s, transform .25s; }
+.timeline-card > p { grid-column: 1 / -1; margin-bottom: 8px; color: #60a5fa; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.timeline-card h3 { grid-column: 1 / -1; margin-bottom: 8px; font-size: 1.14rem; }
+.timeline-card > span { grid-column: 1; display: block; color: var(--text-secondary); font-size: .82rem; line-height: 1.6; }
+.timeline-card a { grid-column: 2; align-self: end; display: inline-flex; align-items: center; gap: 5px; width: max-content; margin-top: 0; color: #93c5fd; font-size: .76rem; white-space: nowrap; transition: color .25s, transform .25s; }
 .timeline-card a:hover { color: #fff; }
 
 .contact-section { padding-bottom: 120px; }
@@ -517,6 +517,8 @@ p, h1, h2, h3 { margin-top: 0; }
   .timeline-item { grid-template-columns: 1fr; gap: 8px; padding-left: 34px; padding-bottom: 20px; }
   .timeline-item::before { top: 9px; left: 4px; }
   .timeline-date { padding: 0; text-align: left; }
+  .timeline-card { grid-template-columns: 1fr; }
+  .timeline-card > p, .timeline-card h3, .timeline-card > span, .timeline-card a { grid-column: 1; }
   .timeline-card a { margin-top: 17px; }
   .contact-card { width: calc(100% - 32px); padding-inline: 24px; }
   .footer-inner { grid-template-columns: auto 1fr; }
