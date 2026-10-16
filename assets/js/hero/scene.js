@@ -2,13 +2,13 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 
 const COLORS = {
-  night: 0x0b0d0f,
-  graphite: 0x171c20,
-  steel: 0x323a40,
-  paper: 0xe8e6df,
-  blue: 0x3767d6,
-  blueLight: 0x78a0ff,
-  brass: 0xb79b63,
+  night: 0x0a0d11,
+  graphite: 0x171e26,
+  steel: 0x35404b,
+  paper: 0xd9dfe4,
+  blue: 0x718bc2,
+  blueLight: 0x9badd2,
+  brass: 0xaa946b,
 };
 
 const damp = (current, target, speed, delta) => THREE.MathUtils.lerp(current, target, 1 - Math.exp(-speed * delta));
@@ -19,7 +19,7 @@ function createMarkTexture() {
   canvas.height = 512;
   const context = canvas.getContext('2d');
   context.clearRect(0, 0, 512, 512);
-  context.strokeStyle = '#8eafff';
+  context.strokeStyle = '#9badd2';
   context.lineWidth = 14;
   context.lineCap = 'square';
   context.beginPath();
@@ -27,7 +27,7 @@ function createMarkTexture() {
   context.moveTo(394, 170); context.lineTo(456, 256); context.lineTo(394, 342);
   context.moveTo(300, 112); context.lineTo(212, 400);
   context.stroke();
-  context.fillStyle = '#b79b63';
+  context.fillStyle = '#aa946b';
   context.font = '500 22px monospace';
   context.textAlign = 'center';
   context.fillText('FF / SYSTEMS', 256, 458);
@@ -126,7 +126,7 @@ function createPanel({ width, height, pivot, offset, rotation, label, side = 'fr
   const tag = document.createElement('canvas');
   tag.width = 512; tag.height = 96;
   const context = tag.getContext('2d');
-  context.fillStyle = side === 'accent' ? '#c2ab7b' : '#94b1f5';
+  context.fillStyle = side === 'accent' ? '#b8a47c' : '#a8b9dc';
   context.font = '500 27px monospace';
   context.textAlign = 'center';
   context.fillText(label, 256, 58);
