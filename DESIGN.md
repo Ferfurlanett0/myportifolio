@@ -2,15 +2,15 @@
 name: Deployable Systems
 description: Um portfólio de engenharia que revela produto, código e operação em camadas precisas.
 colors:
-  engineering-blue: "#3767d6"
-  inspection-blue: "#78a0ff"
-  graphite-ink: "#111315"
-  deep-graphite: "#0b0d0f"
-  raised-graphite: "#15191d"
-  mineral-paper: "#f1f3f3"
-  mineral-paper-deep: "#e4e8e9"
-  muted-brass: "#b79b63"
-  operational-green: "#7fb393"
+  engineering-blue: "#718bc2"
+  inspection-blue: "#9badd2"
+  mineral-text: "#e3e7eb"
+  deep-graphite: "#0a0d11"
+  raised-graphite: "#131920"
+  editorial-graphite: "#0e1217"
+  operational-graphite: "#11171d"
+  muted-brass: "#aa946b"
+  operational-green: "#7fa78e"
 typography:
   display:
     fontFamily: "Manrope, sans-serif"
@@ -45,14 +45,14 @@ spacing:
   section: "clamp(96px, 12vw, 180px)"
 components:
   button-primary:
-    backgroundColor: "{colors.engineering-blue}"
-    textColor: "#ffffff"
+    backgroundColor: "{colors.inspection-blue}"
+    textColor: "{colors.deep-graphite}"
     rounded: "{rounded.control}"
     padding: "0 22px"
     height: "48px"
   button-primary-hover:
-    backgroundColor: "#315bbf"
-    textColor: "#ffffff"
+    backgroundColor: "#adc0e6"
+    textColor: "{colors.deep-graphite}"
 ---
 
 # Design System: Deployable Systems
@@ -74,12 +74,12 @@ A linguagem é editorial, assimétrica e deliberadamente contida. O 3D é a peç
 
 ## Colors
 
-A paleta combina superfícies minerais frias com grafite e um azul de engenharia usado como sinal, não como decoração.
+A paleta combina camadas contínuas de grafite azulado com texto mineral e um azul aço usado como sinal, não como decoração. Não há grandes superfícies brancas: as seções se diferenciam por variações tonais discretas.
 
 ### Primary
 
-- **Azul de Engenharia:** ações principais, links ativos e informação de inspeção.
-- **Azul de Inspeção:** detalhes do objeto 3D e conteúdo sobre fundo escuro.
+- **Azul de Engenharia:** informação técnica secundária e linhas da cena.
+- **Azul de Inspeção:** ações principais, foco e detalhes do objeto 3D.
 
 ### Secondary
 
@@ -89,9 +89,9 @@ A paleta combina superfícies minerais frias com grafite e um azul de engenharia
 ### Neutral
 
 - **Grafite Profundo:** hero, navegação, rodapé e núcleo 3D.
-- **Tinta Grafite:** texto principal sobre superfícies claras.
-- **Papel Mineral:** superfície principal dos estudos de caso.
-- **Papel Mineral Profundo:** separação da trajetória sem recorrer a cartões.
+- **Texto Mineral:** texto principal sem recorrer ao branco puro.
+- **Grafite Editorial:** superfície principal dos estudos de caso.
+- **Grafite Operacional:** separação da trajetória sem recorrer a cartões.
 
 **The Signal Color Rule.** O azul destaca ações, seleção e leitura técnica; nunca colore parágrafos inteiros nem cria halos.
 
@@ -131,14 +131,14 @@ Seções e listas permanecem ortogonais. Controles usam cantos quase retos; o ar
 ### Buttons
 
 - **Shape:** quase ortogonal (2px), altura de 48px.
-- **Primary:** azul sólido, texto branco e ícone linear.
+- **Primary:** azul aço claro, texto grafite e ícone linear.
 - **Hover / Focus:** pequeno deslocamento vertical, tom mais profundo e foco externo visível.
 - **Quiet:** texto sobre a superfície com sublinhado estrutural.
 
 ### Cards / Containers
 
 - **Corner Style:** sem arredondamento no conteúdo editorial.
-- **Background:** mudança tonal em vez de cartão sobre cartão.
+- **Background:** mudança tonal entre grafites em vez de cartão sobre cartão ou blocos brancos.
 - **Shadow Strategy:** ausente por padrão.
 - **Border:** linha de 1px para separar registros e estudos.
 

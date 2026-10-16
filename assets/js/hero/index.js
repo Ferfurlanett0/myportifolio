@@ -15,7 +15,7 @@ async function startHeroScene() {
   }
 
   try {
-    const { mountHeroScene } = await import('./scene.js?v=20261016-1');
+    const { mountHeroScene } = await import('./scene.js?v=20261016-2');
     await mountHeroScene({ canvas, sceneElement, reduceMotion });
   } catch (error) {
     sceneElement.classList.remove('is-webgl-ready');
