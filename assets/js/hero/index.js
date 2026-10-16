@@ -9,16 +9,20 @@ async function startHeroScene() {
 
   if (compactViewport.matches || saveData) {
     sceneElement.classList.add('is-static-fallback');
+    const stateLabel = document.querySelector('[data-render-state]');
+    if (stateLabel) stateLabel.textContent = 'Representação estática';
     return;
   }
 
   try {
-    const { mountHeroScene } = await import('./scene.js?v=20260804-3');
+    const { mountHeroScene } = await import('./scene.js?v=20261016-1');
     await mountHeroScene({ canvas, sceneElement, reduceMotion });
   } catch (error) {
     sceneElement.classList.remove('is-webgl-ready');
     sceneElement.classList.add('is-static-fallback');
-    console.warn('A experiência 3D não pôde ser iniciada; exibindo a arte estática.', error);
+    const stateLabel = document.querySelector('[data-render-state]');
+    if (stateLabel) stateLabel.textContent = 'Representação estática';
+    console.warn('A experiência 3D não pôde ser iniciada; exibindo a representação estática.', error);
   }
 }
 

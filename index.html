@@ -3,327 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Desenvolvedor Full Stack focado na criação de aplicações web modernas, interfaces intuitivas e soluções completas do front-end ao back-end.">
-  <meta name="theme-color" content="#030712">
+  <meta name="description" content="Portfólio de Fernando Furlanetto — desenvolvedor Full Stack que cria produtos digitais completos, da interface à infraestrutura.">
+  <meta name="theme-color" content="#0b0d0f">
   <link rel="canonical" href="https://ferfurlanett0.github.io/myportifolio/">
-  <meta property="og:title" content="Fernando Furlanetto | Full Stack Developer">
-  <meta property="og:description" content="Desenvolvedor Full Stack focado na criação de aplicações web modernas e soluções completas.">
+  <meta property="og:title" content="Fernando Furlanetto | Desenvolvedor Full Stack">
+  <meta property="og:description" content="Produtos digitais construídos com visão de código, produto e operação.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ferfurlanett0.github.io/myportifolio/">
-  <meta property="og:image" content="https://ferfurlanett0.github.io/myportifolio/assets/images/hero-background.png">
-  <title>Fernando Furlanetto | Full Stack Developer</title>
+  <meta property="og:image" content="https://ferfurlanett0.github.io/myportifolio/assets/images/profile-fernando.jpg">
+  <title>Fernando Furlanetto | Desenvolvedor Full Stack</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260804-11">
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "./assets/vendor/three/three.module.min.js",
-        "three/addons/": "./assets/vendor/three/addons/"
-      }
-    }
-  </script>
-  <script type="module" src="assets/js/hero/index.js?v=20260804-3"></script>
-  <script src="assets/js/script.js?v=20260804-5" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261016-1">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.min.js","three/addons/":"./assets/vendor/three/addons/"}}</script>
+  <script src="assets/vendor/gsap/gsap.min.js?v=3.15.0" defer></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js?v=3.15.0" defer></script>
+  <script type="module" src="assets/js/hero/index.js?v=20261016-1"></script>
+  <script src="assets/js/script.js?v=20261016-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
   <header class="site-header" data-header>
     <div class="nav-shell">
-      <a class="brand" href="#inicio" aria-label="Fernando Furlanetto — início">
-        <span class="brand-mark" aria-hidden="true">FF</span>
-        <span class="brand-name">Fernando <strong>Furlanetto</strong></span>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
-        <span></span><span></span><span></span>
-      </button>
-
+      <a class="brand" href="#inicio" aria-label="Fernando Furlanetto — início"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando Furlanetto</span></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav" data-menu-toggle><span></span><span></span><span></span></button>
       <nav class="main-nav" id="main-nav" aria-label="Navegação principal" data-nav>
-        <a href="#inicio" class="active">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#skills">Skills</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#contato">Contato</a>
+        <a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#capacidades">Capacidades</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a>
       </nav>
-
-      <a class="header-cta" href="assets/documents/curriculo-fernando-furlanetto.pdf" download>
-        Baixar CV
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>
-      </a>
+      <a class="header-cta" href="assets/documents/curriculo-fernando-furlanetto.pdf" download>Currículo <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg></a>
     </div>
   </header>
 
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="hero-title" data-hero>
-      <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-shell">
-        <div class="hero-content">
-          <p class="eyebrow reveal reveal-delay-1"><span></span> Olá, eu sou</p>
-          <h1 id="hero-title" class="reveal reveal-delay-2">
-            <span>Fernando</span>
-            <strong>Furlanetto</strong>
-          </h1>
-          <p class="role reveal reveal-delay-3">Desenvolvedor <strong>Full Stack</strong></p>
-          <p class="hero-description reveal reveal-delay-4">
-            Desenvolvo soluções completas para a web, de interfaces intuitivas ao back-end, integrações e bancos de dados. Transformo ideias em aplicações reais.
-          </p>
-          <div class="hero-actions reveal reveal-delay-5">
-            <a class="button button-primary" href="#projetos">
-              Ver projetos
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="button button-secondary" href="#sobre">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-              Sobre mim
-            </a>
+        <div class="hero-copy" data-hero-copy>
+          <div class="availability"><span aria-hidden="true"></span> Disponível para novos desafios</div>
+          <h1 id="hero-title">Software que funciona <em>no código</em> e no mundo real.</h1>
+          <p class="hero-description">Sou Fernando Furlanetto, desenvolvedor Full Stack. Transformo problemas de operação em produtos digitais claros, confiáveis e prontos para uso.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projetos">Explorar projetos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="button button-quiet" href="mailto:fernandopfurlanetto@gmail.com">Conversar por e-mail</a>
           </div>
-
-          <div class="find-me reveal reveal-delay-6">
-            <p>Me encontre</p>
-            <div class="social-row">
-              <a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Fernando Furlanetto">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 12 2Z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Fernando Furlanetto">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M8.3 18.5v-8.4H5.5v8.4h2.8M6.9 8.96a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24m11.6 9.54v-4.62c0-2.47-.53-4.37-3.42-4.37-1.39 0-2.32.76-2.7 1.49h-.04v-.89H9.66v8.39h2.79v-4.15c0-1.1.2-2.15 1.56-2.15 1.34 0 1.36 1.25 1.36 2.22v4.08h3.13Z"/></svg>
-              </a>
-              <a href="mailto:fernandopfurlanetto@gmail.com" aria-label="Enviar e-mail para Fernando Furlanetto">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>
-              </a>
-            </div>
+          <div class="hero-links" role="group" aria-label="Perfis profissionais">
+            <a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+            <span>São João da Boa Vista · SP</span>
           </div>
         </div>
-
-        <div class="hero-scene" aria-hidden="true" data-hero-scene>
-          <picture class="hero-scene-poster" data-hero-poster>
-            <source srcset="assets/images/hero-background.webp" type="image/webp">
-            <img src="assets/images/hero-background.png" alt="" width="1672" height="941" fetchpriority="high">
-          </picture>
-
-          <canvas class="hero-canvas" data-hero-canvas></canvas>
-          <div class="scene-vignette"></div>
-
-          <div class="scene-panel scene-panel-left" data-scene-panel data-depth="-0.65">
-            <div class="code-panel">
-              <span>function <b>solveProblem</b>() {</span>
-              <span>&nbsp;&nbsp;const idea = <em>"transformar"</em>;</span>
-              <span>&nbsp;&nbsp;const dedication = <em>true</em>;</span>
-              <span>&nbsp;&nbsp;return <b>buildSolution</b>(idea);</span>
-              <span>}</span>
-            </div>
+        <div class="hero-visual" data-hero-visual>
+          <div class="visual-label"><span>CORE / 01</span><span data-render-state>Objeto interativo</span></div>
+          <div class="hero-scene" aria-hidden="true" data-hero-scene>
+            <div class="fallback-object" data-hero-poster><i class="fallback-plate fallback-plate-a"></i><i class="fallback-plate fallback-plate-b"></i><i class="fallback-core"></i><i class="fallback-axis"></i></div>
+            <canvas class="hero-canvas" data-hero-canvas></canvas>
           </div>
-
-          <div class="scene-panel scene-panel-right" data-scene-panel data-depth="0.8">
-            <div class="code-panel">
-              <span>const stack = {</span>
-              <span>&nbsp;&nbsp;frontend: [</span>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;<em>"React"</em>, <em>"TypeScript"</em></span>
-              <span>&nbsp;&nbsp;],</span>
-              <span>&nbsp;&nbsp;backend: [<em>"Python"</em>],</span>
-              <span>&nbsp;&nbsp;database: [<em>"MySQL"</em>]</span>
-              <span>};</span>
-            </div>
-          </div>
+          <div class="visual-note"><span>Three.js / GSAP</span><span>mova o cursor para inspecionar</span></div>
         </div>
       </div>
-
-      <div class="tech-shell reveal reveal-delay-7" role="group" aria-labelledby="tech-title">
-        <p id="tech-title">Tecnologias que utilizo</p>
-        <div class="tech-marquee" data-tech-marquee>
-          <div class="tech-track" data-tech-track>
-            <ul class="tech-group" data-tech-group>
-              <li><img src="assets/icons/react.svg" alt="" width="48" height="48">React</li>
-              <li><img src="assets/icons/typescript.svg" alt="" width="48" height="48">TypeScript</li>
-              <li><img src="assets/icons/tailwindcss.svg" alt="" width="48" height="48">Tailwind CSS</li>
-              <li><img src="assets/icons/javascript.svg" alt="" width="48" height="48">JavaScript</li>
-              <li><img src="assets/icons/python.svg" alt="" width="48" height="48">Python</li>
-              <li><img src="assets/icons/html5.svg" alt="" width="48" height="48">HTML5</li>
-              <li><img src="assets/icons/css3.svg" alt="" width="48" height="48">CSS3</li>
-              <li><img src="assets/icons/mysql.svg" alt="" width="48" height="48">MySQL</li>
-              <li><img src="assets/icons/git.svg" alt="" width="48" height="48">Git</li>
-              <li><img src="assets/icons/docker.svg" alt="" width="48" height="48">Docker</li>
-              <li><img src="assets/icons/aws.svg" alt="" width="48" height="48">AWS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section about" id="sobre" aria-labelledby="about-title">
-      <div class="section-shell about-grid">
-        <div class="portrait-wrap reveal-on-scroll">
-          <div class="portrait-frame"><img src="assets/images/profile-fernando.jpg" alt="Fernando Furlanetto" loading="lazy" width="800" height="1000"></div>
-          <div class="portrait-chip"><span></span> Disponível para novos desafios</div>
-        </div>
-        <div class="about-copy reveal-on-scroll">
-          <p class="section-kicker">Sobre mim</p>
-          <h2 id="about-title">Formação sólida, <span>visão prática</span></h2>
-          <p>Sou bacharel em Ciência da Computação e tecnólogo em Análise e Desenvolvimento de Sistemas. Atualmente atuo como Analista de Suporte Júnior II, unindo desenvolvimento, infraestrutura, redes e resolução de problemas no dia a dia.</p>
-          <p>Desenvolvo projetos Full Stack com JavaScript, TypeScript, React, Node.js e Python, criando APIs, integrações e experiências apoiadas por inteligência artificial. Minha experiência com UX/UI e suporte técnico me ajuda a enxergar tanto a arquitetura da solução quanto a experiência de quem realmente vai utilizá-la.</p>
-          <div class="about-points">
-            <div><strong>Full Stack</strong><span>Visão completa da solução</span></div>
-            <div><strong>2 graduações</strong><span>Ciência da Computação e ADS</span></div>
-            <div><strong>Suporte &amp; Infra</strong><span>Sistemas, redes e segurança</span></div>
-          </div>
-        </div>
+      <div class="discipline-rail" role="group" aria-label="Áreas de atuação">
+        <div><span>01</span><strong>Interface</strong><small>React · TypeScript</small></div>
+        <div><span>02</span><strong>Sistemas</strong><small>Node.js · Python</small></div>
+        <div><span>03</span><strong>Operação</strong><small>Cloud · Infraestrutura</small></div>
+        <div><span>04</span><strong>Produto</strong><small>UX · IA · Qualidade</small></div>
       </div>
     </section>
 
     <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
       <div class="section-shell">
-        <header class="section-heading reveal-on-scroll">
-          <div><p class="section-kicker">Projetos</p><h2 id="projects-title">Ideias transformadas em <span>experiências reais</span></h2></div>
-          <p>Uma seleção do meu trabalho em desenvolvimento web e dos projetos que estão em construção.</p>
-        </header>
-
-        <div class="featured-project compry-featured reveal-on-scroll">
-          <div class="compry-visual">
-            <div class="compry-grid" aria-hidden="true"></div>
-            <div class="compry-orbit compry-orbit-one" aria-hidden="true"></div>
-            <div class="compry-orbit compry-orbit-two" aria-hidden="true"></div>
-            <div class="compry-logo-wrap">
-              <img src="assets/images/projects/compry-app-icon.png" alt="Ícone do Compry App" loading="lazy">
-            </div>
-            <span class="compry-chip compry-chip-one">Offline first</span>
-            <span class="compry-chip compry-chip-two">Sincronização em nuvem</span>
-            <span class="compry-chip compry-chip-three">Android · Web · Windows</span>
-          </div>
-          <div class="project-copy">
-            <p class="project-number">01 / Aplicativo multiplataforma</p>
-            <h3>Compry App</h3>
-            <p>Sistema inteligente para gestão de listas de compras, criado para conectar administradores e equipes em uma experiência rápida, organizada e disponível mesmo sem internet.</p>
-            <ul class="project-feature-list">
-              <li>Perfis de administrador e funcionário</li>
-              <li>Checklist em tempo real com histórico e progresso</li>
-              <li>Modo offline, sincronização automática e notificações</li>
-            </ul>
-            <ul class="tag-list"><li>Flutter</li><li>Dart</li><li>Firebase</li><li>Riverpod</li><li>Hive</li></ul>
-            <div class="project-links">
-              <a href="https://compry-app.vercel.app" target="_blank" rel="noopener noreferrer">Abrir aplicativo <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/Ferfurlanett0/compry_APP" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a>
+        <header class="section-intro"><h2 id="projects-title">Projetos feitos para sair do protótipo.</h2><p>Uma seleção de produtos em que arquitetura, interface e rotina operacional precisaram funcionar juntas.</p></header>
+        <article class="case-study case-study-compry" data-case-study>
+          <div class="case-visual" data-case-visual>
+            <div class="compry-interface" role="img" aria-label="Representação visual do Compry App">
+              <div class="compry-top"><span>Compry</span><span>lista ativa · 08 itens</span></div><div class="compry-progress"><i></i></div>
+              <div class="compry-items"><span class="done"><i></i>Arroz integral<small>2 un.</small></span><span class="done"><i></i>Leite<small>6 un.</small></span><span><i></i>Café<small>1 un.</small></span></div>
+              <div class="compry-sync"><span></span> sincronizado agora</div>
             </div>
           </div>
-        </div>
-
-        <div class="featured-project reveal-on-scroll">
-          <div class="project-image tempero-project-image">
-            <img src="assets/images/projects/tempero-gaucho-hero.jpg" alt="Churrasco na brasa apresentado no novo site do Tempero Gaúcho" loading="lazy">
-            <div class="tempero-preview-ui" aria-hidden="true">
-              <div class="tempero-mini-nav">
-                <div class="tempero-mini-brand"><strong>NOVO <span>TEMPERO GAÚCHO</span></strong><small>Churrascaria desde 1997</small></div>
-                <div class="tempero-mini-links"><span>Home</span><span>Cardápio</span><span>Galeria</span><span>Local</span></div>
-              </div>
-              <div class="tempero-mini-copy">
-                <small>Tradição gaúcha</small>
-                <strong>Experimente a Autêntica<br>Culinária Gaúcha</strong>
-                <span>Ver cardápio</span>
-              </div>
-            </div>
-            <span>Nova experiência digital</span>
+          <div class="case-copy">
+            <div class="case-meta"><span>Produto multiplataforma</span><span>2026</span></div><h3>Compry App</h3>
+            <p class="case-lead">Gestão compartilhada de compras que continua funcionando mesmo quando a conexão não ajuda.</p>
+            <p>Criei fluxos para administradores e equipes, checklist em tempo real, histórico, notificações e sincronização offline para Android, Web e Windows.</p>
+            <ul class="stack-list"><li>Flutter</li><li>Dart</li><li>Firebase</li><li>Riverpod</li><li>Hive</li></ul>
+            <div class="case-links"><a href="https://compry-app.vercel.app" target="_blank" rel="noopener noreferrer">Abrir produto <span>↗</span></a><a href="https://github.com/Ferfurlanett0/compry_APP" target="_blank" rel="noopener noreferrer">Código-fonte <span>↗</span></a></div>
           </div>
-          <div class="project-copy">
-            <p class="project-number">02 / Aplicação web</p>
-            <h3>Tempero Gaúcho</h3>
-            <p>Website responsivo reconstruído com React e TypeScript, com hero imersivo, cardápio digital, galeria, localização e fluxo direto para reservas.</p>
-            <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
-            <div class="project-links">
-              <a href="https://tempero-gaucho.vercel.app" target="_blank" rel="noopener noreferrer">Ver projeto <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/Ferfurlanett0/sitechurrascaria_vercel" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
-            </div>
+        </article>
+        <article class="case-study case-study-tempero" data-case-study>
+          <div class="case-copy">
+            <div class="case-meta"><span>Experiência web</span><span>2025</span></div><h3>Tempero Gaúcho</h3>
+            <p class="case-lead">Uma presença digital que traduz tradição sem parecer presa ao passado.</p>
+            <p>Reconstruí o site com navegação responsiva, cardápio digital, galeria, localização e fluxo direto para reservas.</p>
+            <ul class="stack-list"><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
+            <div class="case-links"><a href="https://tempero-gaucho.vercel.app" target="_blank" rel="noopener noreferrer">Visitar site <span>↗</span></a><a href="https://github.com/Ferfurlanett0/sitechurrascaria_vercel" target="_blank" rel="noopener noreferrer">Código-fonte <span>↗</span></a></div>
           </div>
-        </div>
-
-        <div class="project-detail-grid">
-          <article class="project-detail-card reveal-on-scroll">
-            <div class="project-card-top"><span>03</span><span class="project-status live">Online</span></div>
-            <h3>BeachClass</h3>
-            <p>Ecossistema de gestão para professores de Beach Tennis com agenda, alunos, controle financeiro e lembretes automatizados via WhatsApp e EvolutionAPI.</p>
-            <ul class="tag-list"><li>APIs</li><li>Docker</li><li>Oracle Cloud</li><li>WhatsApp</li></ul>
-            <div class="project-links"><a href="https://beachapp.lovable.app" target="_blank" rel="noopener noreferrer">Abrir aplicativo <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-detail-card reveal-on-scroll">
-            <div class="project-card-top"><span>04</span><span class="project-status live">Online</span></div>
-            <h3>Entrio IA</h3>
-            <p>Plataforma de preparação profissional com análise e otimização de currículos, entrevistas simuladas por texto ou voz e relatórios de desempenho com IA.</p>
-            <ul class="tag-list"><li>Inteligência Artificial</li><li>PDF</li><li>Voz</li><li>EdTech</li></ul>
-            <div class="project-links"><a href="https://entrioia.lovable.app" target="_blank" rel="noopener noreferrer">Abrir aplicativo <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-detail-card reveal-on-scroll">
-            <div class="project-card-top"><span>05</span><span class="project-status">Projeto autoral</span></div>
-            <h3>Sistema para Churrascaria</h3>
-            <p>Aplicativo em Python para pedidos, clientes, empresas, pagamentos, entregas, relatórios gerenciais e impressão de comprovantes fiscais.</p>
-            <ul class="tag-list"><li>Python</li><li>Automação</li><li>Gestão</li></ul>
-            <div class="project-links"><a href="https://github.com/Ferfurlanett0/churrascaria_app" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a></div>
-          </article>
+          <a class="case-visual photo-visual" data-case-visual href="https://tempero-gaucho.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site Tempero Gaúcho"><img src="assets/images/projects/tempero-gaucho-hero.jpg" alt="Página inicial do site Tempero Gaúcho" loading="lazy" width="1600" height="900"><span>Ver experiência ao vivo ↗</span></a>
+        </article>
+        <div class="project-register" role="group" aria-label="Outros projetos">
+          <article class="project-row"><div><span>Aplicação de gestão</span><h3>BeachClass</h3></div><p>Agenda, alunos, financeiro e lembretes por WhatsApp para professores de Beach Tennis.</p><ul><li>APIs</li><li>Docker</li><li>Oracle Cloud</li></ul><a href="https://beachapp.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir BeachClass">Abrir ↗</a></article>
+          <article class="project-row"><div><span>Produto com IA</span><h3>Entrio IA</h3></div><p>Análise de currículos, entrevistas simuladas por texto ou voz e relatórios de desempenho.</p><ul><li>IA</li><li>PDF</li><li>Voz</li></ul><a href="https://entrioia.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir Entrio IA">Abrir ↗</a></article>
+          <article class="project-row"><div><span>Sistema autoral</span><h3>Gestão para Churrascaria</h3></div><p>Pedidos, clientes, pagamentos, entregas, relatórios e impressão de comprovantes.</p><ul><li>Python</li><li>Automação</li><li>Gestão</li></ul><a href="https://github.com/Ferfurlanett0/churrascaria_app" target="_blank" rel="noopener noreferrer" aria-label="Ver código do sistema para churrascaria">Código ↗</a></article>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+    <section class="section about-section" id="sobre" aria-labelledby="about-title">
+      <div class="section-shell about-layout">
+        <div class="portrait-column"><div class="portrait-frame"><img src="assets/images/profile-fernando.jpg" alt="Fernando Furlanetto" loading="lazy" width="800" height="1000"></div><p><span>22 anos</span><span>São João da Boa Vista · SP</span></p></div>
+        <div class="about-copy">
+          <h2 id="about-title">Entendo o produto inteiro, não só a tela.</h2>
+          <p class="about-lead">Minha formação em Ciência da Computação e Análise e Desenvolvimento de Sistemas se encontra com uma experiência prática em suporte, infraestrutura e pessoas.</p>
+          <div class="about-columns"><p>Desenvolvo aplicações Full Stack com JavaScript, TypeScript, React, Node.js e Python. Gosto de organizar problemas complexos em fluxos que façam sentido para quem usa.</p><p>No suporte técnico, aprendi a observar o que acontece depois do deploy: conectividade, segurança, continuidade e o impacto real de uma decisão de produto.</p></div>
+          <a class="inline-link" href="assets/documents/curriculo-fernando-furlanetto.pdf" download>Baixar currículo completo <span>↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capabilities-section" id="capacidades" aria-labelledby="capabilities-title">
       <div class="section-shell">
-        <header class="section-heading centered reveal-on-scroll">
-          <div><p class="section-kicker">Competências</p><h2 id="skills-title">Construindo de ponta a ponta</h2></div>
-          <p>Conhecimentos comprovados pela formação, certificações e projetos presentes neste portfólio.</p>
-        </header>
-        <div class="skill-grid">
-          <article class="skill-card reveal-on-scroll"><span>01</span><h3>Front-end</h3><p>React, TypeScript, JavaScript, Tailwind CSS, HTML semântico e interfaces responsivas.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>02</span><h3>Back-end &amp; dados</h3><p>Node.js, Python, criação e integração de APIs, EvolutionAPI, automações e MySQL.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>03</span><h3>Cloud &amp; infraestrutura</h3><p>Docker, AWS, Oracle Cloud, Vercel, GitHub, redes LAN/WAN/WLAN, backup e segurança.</p><div class="skill-line"></div></article>
-          <article class="skill-card reveal-on-scroll"><span>04</span><h3>Produto, IA &amp; qualidade</h3><p>Inteligência artificial, UX/UI, Figma, metodologias ágeis, análise crítica e garantia de qualidade.</p><div class="skill-line"></div></article>
+        <header class="section-intro compact"><h2 id="capabilities-title">Capacidade de ponta a ponta.</h2><p>Quatro frentes que se conectam em cada solução.</p></header>
+        <div class="capability-matrix">
+          <article class="capability-row"><span>Interface</span><h3>Produtos claros e responsivos</h3><p>React, TypeScript, JavaScript, Tailwind CSS, HTML semântico e acessibilidade.</p></article>
+          <article class="capability-row"><span>Sistemas</span><h3>Regras, integrações e dados</h3><p>Node.js, Python, APIs, EvolutionAPI, automações, Firebase e MySQL.</p></article>
+          <article class="capability-row"><span>Operação</span><h3>Software preparado para o ambiente real</h3><p>Docker, AWS, Oracle Cloud, Vercel, GitHub, redes, backup e segurança.</p></article>
+          <article class="capability-row"><span>Produto</span><h3>Decisões apoiadas por contexto</h3><p>UX/UI, Figma, inteligência artificial, metodologias ágeis e garantia de qualidade.</p></article>
+        </div>
+        <div class="technology-strip" role="group" aria-label="Tecnologias utilizadas"><span>Tecnologias em uso</span><ul><li><img src="assets/icons/react.svg" alt="">React</li><li><img src="assets/icons/typescript.svg" alt="">TypeScript</li><li><img src="assets/icons/javascript.svg" alt="">JavaScript</li><li><img src="assets/icons/python.svg" alt="">Python</li><li><img src="assets/icons/mysql.svg" alt="">MySQL</li><li><img src="assets/icons/docker.svg" alt="">Docker</li><li><img src="assets/icons/aws.svg" alt="">AWS</li><li><img src="assets/icons/git.svg" alt="">Git</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="trajetoria" aria-labelledby="journey-title">
+      <div class="section-shell journey-layout">
+        <header class="journey-heading"><h2 id="journey-title">Trajetória construída entre software e operação.</h2><p>Experiência profissional, formação concluída e estudo contínuo.</p></header>
+        <div class="journey-content">
+          <h3>Experiência</h3>
+          <div class="experience-list">
+            <article><time>abr/2026 — atual</time><div><strong>Analista de Suporte Júnior II</strong><span>CTC</span><p>Suporte presencial e remoto, equipamentos, Windows, Chrome OS, conectividade, backup, recuperação de dados e segurança.</p></div></article>
+            <article><time>jul/2025 — mar/2026</time><div><strong>Técnico de Suporte de Sistema</strong><span>Alcavie Systems</span><p>Onboarding, treinamento, suporte consultivo, gestão de carteira, CRM, prevenção de churn e apoio comercial.</p></div></article>
+            <article><time>dez/2024 — mar/2025</time><div><strong>Oficial de Manutenção Predial II</strong><span>Mservice</span><p>Manutenção da infraestrutura de rede lógica nas instalações do INSS.</p></div></article>
+            <article><time>ago/2024 — dez/2024</time><div><strong>Estagiário de TI</strong><span>INSS</span><p>Suporte técnico, análise e resolução de problemas em ambiente institucional.</p></div></article>
+            <article><time>jul/2022 — mar/2024</time><div><strong>Assistente de Manutenção</strong><span>Superinfo Notebooks</span><p>Diagnóstico, manutenção de computadores e notebooks e suporte de hardware.</p></div></article>
+          </div>
+          <h3 class="education-title">Formação</h3>
+          <div class="education-list">
+            <article><div><span>UNIFEOB · 2022—2025</span><h4>Bacharelado em Ciência da Computação</h4><p>Software, estruturas de dados, bancos de dados, engenharia, redes e sistemas operacionais.</p></div><a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.eba3f1d597b3" target="_blank" rel="noopener noreferrer">Ver diploma ↗</a></article>
+            <article><div><span>UNIFEOB · 2022—2024</span><h4>Tecnologia em Análise e Desenvolvimento de Sistemas</h4><p>Análise, projeto, desenvolvimento e qualidade de sistemas.</p></div><a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.21a799ba4fcf" target="_blank" rel="noopener noreferrer">Ver diploma ↗</a></article>
+          </div>
+          <details class="credentials">
+            <summary>Certificações e cursos complementares <span>6 credenciais</span></summary>
+            <div class="credential-list">
+              <a href="https://app.rocketseat.com.br/certificates/c0d09bea-9a51-429d-919a-b3f27146dcfd" target="_blank" rel="noopener noreferrer"><span>2025 · Rocketseat</span><strong>NLW Agents — Avançado</strong><i>↗</i></a>
+              <a href="https://cursos.alura.com.br/immersion/certificate/a9b64deb-2515-4e24-a33b-1e0c67557058?lang" target="_blank" rel="noopener noreferrer"><span>2025 · Alura</span><strong>Imersão IA — 3ª edição</strong><i>↗</i></a>
+              <a href="https://cursos.alura.com.br/immersion/certificate/46cdb64b-8735-4475-9497-9e66765b01bc" target="_blank" rel="noopener noreferrer"><span>2025 · Alura</span><strong>Imersão Dev — 9ª edição</strong><i>↗</i></a>
+              <a href="https://moocs.ggte.unicamp.br/certificate/yGCMfX9R" target="_blank" rel="noopener noreferrer"><span>2025 · Unicamp</span><strong>Desenvolvimento Web com AngularJS</strong><i>↗</i></a>
+              <a href="https://moocs.ggte.unicamp.br/certificate/5_TgYYX8" target="_blank" rel="noopener noreferrer"><span>2025 · Unicamp</span><strong>UX/UI Design</strong><i>↗</i></a>
+              <a href="https://www.credly.com/badges/eccfbecf-fbdc-45de-b641-908317fd8c45/linked_in_profile" target="_blank" rel="noopener noreferrer"><span>2023 · AWS Academy</span><strong>Cloud Foundations</strong><i>↗</i></a>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section experience-section" id="experiencia" aria-labelledby="experience-title">
-      <div class="section-shell">
-        <header class="section-heading reveal-on-scroll">
-          <div><p class="section-kicker">Experiência &amp; formação</p><h2 id="experience-title">Uma trajetória de <span>aprendizado contínuo</span></h2></div>
-          <p>Experiência profissional em tecnologia, duas graduações e certificações que sustentam minha atuação técnica.</p>
-        </header>
-        <div class="timeline">
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">abr/2026 — atual</div><div class="timeline-card"><p>CTC</p><h3>Analista de Suporte Júnior II</h3><span>Suporte presencial e remoto, configuração e manutenção de equipamentos, Windows e Chrome OS, conectividade LAN/WAN/WLAN, backup, recuperação de dados e segurança da informação.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">jul/2025 — mar/2026</div><div class="timeline-card"><p>Alcavie Systems</p><h3>Técnico de Suporte de Sistema</h3><span>Onboarding, treinamento, suporte consultivo, gestão de carteira e CRM, prevenção de churn e apoio comercial.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">dez/2024 — mar/2025</div><div class="timeline-card"><p>Mservice</p><h3>Oficial de Manutenção Predial II</h3><span>Atuação dedicada à manutenção da infraestrutura de rede lógica nas instalações do INSS.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">ago/2024 — dez/2024</div><div class="timeline-card"><p>INSS</p><h3>Estagiário de TI</h3><span>Suporte técnico, análise e resolução de problemas em ambiente institucional.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">jul/2022 — mar/2024</div><div class="timeline-card"><p>Superinfo Notebooks</p><h3>Assistente de Manutenção</h3><span>Experiência prática com diagnóstico, manutenção de computadores e notebooks e suporte técnico de hardware.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2022 — 2025</div><div class="timeline-card"><p>UNIFEOB</p><h3>Bacharelado em Ciência da Computação</h3><span>Desenvolvimento de software, estruturas de dados, bancos de dados, engenharia de software, redes e sistemas operacionais.</span><a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.eba3f1d597b3" target="_blank" rel="noopener noreferrer">Ver diploma <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2022 — 2024</div><div class="timeline-card"><p>UNIFEOB</p><h3>Tecnologia em Análise e Desenvolvimento de Sistemas</h3><span>Formação superior em análise, projeto, desenvolvimento e qualidade de sistemas.</span><a href="https://diploma.unifeob.edu.br/diploma/#/1836.1836.21a799ba4fcf" target="_blank" rel="noopener noreferrer">Ver diploma <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">jul/2025</div><div class="timeline-card"><p>Rocketseat</p><h3>NLW Agents — Avançado</h3><span>Desenvolvimento de aplicações com agentes inteligentes e integração de recursos de IA.</span><a href="https://app.rocketseat.com.br/certificates/c0d09bea-9a51-429d-919a-b3f27146dcfd" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">mai/2025</div><div class="timeline-card"><p>Alura</p><h3>Imersão IA — 3ª edição</h3><span>Aplicação prática de inteligência artificial e construção de soluções com modelos generativos.</span><a href="https://cursos.alura.com.br/immersion/certificate/a9b64deb-2515-4e24-a33b-1e0c67557058?lang" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">abr/2025</div><div class="timeline-card"><p>Alura</p><h3>Imersão Dev — 9ª edição</h3><span>Imersão prática em desenvolvimento e construção de projetos.</span><a href="https://cursos.alura.com.br/immersion/certificate/46cdb64b-8735-4475-9497-9e66765b01bc" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">mar/2025</div><div class="timeline-card"><p>Unicamp</p><h3>Desenvolvimento Web com AngularJS</h3><span>Desenvolvimento web e fundamentos de aplicações JavaScript.</span><a href="https://moocs.ggte.unicamp.br/certificate/yGCMfX9R" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">mar/2025</div><div class="timeline-card"><p>Unicamp</p><h3>UX/UI Design</h3><span>Pesquisa, prototipação e testes de usabilidade.</span><a href="https://moocs.ggte.unicamp.br/certificate/5_TgYYX8" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">mar/2025</div><div class="timeline-card"><p>Santander Open Academy</p><h3>Google: Inteligência Artificial e Produtividade</h3><span>Aplicação prática de inteligência artificial para produtividade e resolução de problemas.</span></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2024</div><div class="timeline-card"><p>Escola Saga</p><h3>Composição de Imagens</h3><span>Design e desenvolvimento visual</span><a href="https://hub.saga.com.br/certificado?chave=528B1E92" target="_blank" rel="noopener noreferrer">Ver certificado <span aria-hidden="true">↗</span></a></div></article>
-          <article class="timeline-item reveal-on-scroll"><div class="timeline-date">2023</div><div class="timeline-card"><p>Amazon Web Services</p><h3>AWS Academy Cloud Foundations</h3><span>Arquitetura, serviços, segurança e redes</span><a href="https://www.credly.com/badges/eccfbecf-fbdc-45de-b641-908317fd8c45/linked_in_profile" target="_blank" rel="noopener noreferrer">Ver credencial <span aria-hidden="true">↗</span></a></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contato" aria-labelledby="contact-title">
-      <div class="section-shell contact-card reveal-on-scroll">
-        <div class="contact-glow" aria-hidden="true"></div>
-        <p class="section-kicker">Vamos conversar</p>
-        <h2 id="contact-title">Tem uma ideia? Vamos <span>construí-la juntos.</span></h2>
-        <p>Estou aberto a novos desafios, colaborações e oportunidades em desenvolvimento de software.</p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:fernandopfurlanetto@gmail.com">Enviar um e-mail <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="text-link" href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="assets/documents/curriculo-fernando-furlanetto.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
-        </div>
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="section-shell contact-layout">
+        <h2 id="contact-title">Vamos construir algo que seja útil de verdade.</h2>
+        <div class="contact-copy"><p>Estou aberto a oportunidades em desenvolvimento de software, produtos digitais e projetos que aproximem tecnologia de problemas concretos.</p><a class="button button-light" href="mailto:fernandopfurlanetto@gmail.com">fernandopfurlanetto@gmail.com <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><div><a href="https://www.linkedin.com/in/fernando-furlanetto-5b3439222/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/Ferfurlanett0" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando <strong>Furlanetto</strong></span></a>
-      <p>Projetado e desenvolvido com atenção aos detalhes.</p>
-      <p>© <span data-year>2026</span> Fernando Furlanetto.</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="section-shell footer-inner"><a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">FF</span><span class="brand-name">Fernando Furlanetto</span></a><p>Desenvolvido com Three.js, GSAP e atenção ao que importa.</p><p>© <span data-year>2026</span></p></div></footer>
 </body>
 </html>
