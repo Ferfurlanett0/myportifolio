@@ -4,31 +4,9 @@ const nav = document.querySelector('[data-nav]');
 const navLinks = [...document.querySelectorAll('.main-nav a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const techTrack = document.querySelector('[data-tech-track]');
-const techGroup = document.querySelector('[data-tech-group]');
-const hero = document.querySelector('[data-hero]');
-
-if (hero) {
-  const sceneVisibilityObserver = new IntersectionObserver(([entry]) => {
-    hero.classList.toggle('scene-paused', !entry.isIntersecting || document.hidden);
-  }, { threshold: .02 });
-
-  sceneVisibilityObserver.observe(hero);
-  document.addEventListener('visibilitychange', () => {
-    hero.classList.toggle('scene-paused', document.hidden || hero.getBoundingClientRect().bottom < 0);
-  });
-}
-
-if (techTrack && techGroup && !reduceMotion.matches) {
-  const clonedGroup = techGroup.cloneNode(true);
-  clonedGroup.removeAttribute('data-tech-group');
-  clonedGroup.setAttribute('aria-hidden', 'true');
-  techTrack.append(clonedGroup);
-  requestAnimationFrame(() => techTrack.classList.add('ready'));
-}
 
 function updateHeader() {
-  header?.classList.toggle('scrolled', window.scrollY > 20);
+  header?.classList.toggle('scrolled', window.scrollY > 18);
 }
 
 function closeMenu() {
@@ -39,56 +17,98 @@ function closeMenu() {
   document.body.classList.remove('menu-open');
 }
 
-function toggleMenu() {
-  if (!menuToggle || !nav) return;
-  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-  menuToggle.setAttribute('aria-expanded', String(!isOpen));
-  menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-  nav.classList.toggle('open', !isOpen);
-  document.body.classList.toggle('menu-open', !isOpen);
-}
+menuToggle?.addEventListener('click', () => {
+  const open = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', String(!open));
+  menuToggle.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+  nav?.classList.toggle('open', !open);
+  document.body.classList.toggle('menu-open', !open);
+});
 
-menuToggle?.addEventListener('click', toggleMenu);
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeMenu();
-});
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 960) closeMenu();
-});
-
-const activeSectionObserver = new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter((entry) => entry.isIntersecting)
-    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-  if (!visible) return;
-  navLinks.forEach((link) => {
-    const isActive = link.getAttribute('href') === `#${visible.target.id}`;
-    link.classList.toggle('active', isActive);
-    if (isActive) link.setAttribute('aria-current', 'page');
-    else link.removeAttribute('aria-current');
-  });
-}, { rootMargin: '-30% 0px -55%', threshold: [0, .15, .4] });
-
-sections.forEach((section) => activeSectionObserver.observe(section));
-
-const revealElements = document.querySelectorAll('.reveal-on-scroll');
-if (reduceMotion.matches) {
-  revealElements.forEach((element) => element.classList.add('visible'));
-} else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: .12, rootMargin: '0px 0px -50px' });
-  revealElements.forEach((element) => revealObserver.observe(element));
-}
-
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
+
+const activeSectionObserver = new IntersectionObserver((entries) => {
+  const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (!visible) return;
+  navLinks.forEach((link) => {
+    const active = link.getAttribute('href') === `#${visible.target.id}`;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+}, { rootMargin: '-28% 0px -62%', threshold: [0, .1, .35] });
+
+sections.forEach((section) => activeSectionObserver.observe(section));
+const year = document.querySelector('[data-year]');
+if (year) year.textContent = new Date().getFullYear();
+
+if (!reduceMotion.matches && window.gsap && window.ScrollTrigger) {
+  const { gsap, ScrollTrigger } = window;
+  gsap.registerPlugin(ScrollTrigger);
+  const compactMotion = window.matchMedia('(max-width: 900px)').matches;
+
+  const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  intro
+    .from('.availability', { y: 10, opacity: 0, duration: .42 })
+    .from('.hero h1', { y: compactMotion ? 26 : 42, opacity: 0, filter: compactMotion ? 'none' : 'blur(6px)', duration: compactMotion ? .62 : .82 }, '-=.28')
+    .from('.hero-description', { y: 16, opacity: 0, duration: .52 }, '-=.5')
+    .from('.hero-actions, .hero-links', { y: 12, opacity: 0, duration: .46, stagger: .06 }, '-=.38')
+    .from('[data-hero-visual]', { scale: .96, opacity: 0, filter: compactMotion ? 'none' : 'blur(7px)', duration: .78 }, '-=.68')
+    .from('.discipline-rail > div', { y: 12, opacity: 0, duration: .42, stagger: .045 }, '-=.52');
+
+  gsap.utils.toArray('[data-case-study]').forEach((study) => {
+    const visual = study.querySelector('[data-case-visual]');
+    const copy = study.querySelector('.case-copy');
+    gsap.from(visual, {
+      clipPath: 'inset(0 0 100% 0)',
+      duration: 1.15,
+      ease: 'expo.out',
+      scrollTrigger: { trigger: study, start: 'top 78%', once: true },
+    });
+    gsap.from(copy, {
+      y: 44,
+      opacity: 0,
+      duration: .9,
+      ease: 'expo.out',
+      scrollTrigger: { trigger: study, start: 'top 72%', once: true },
+    });
+  });
+
+  gsap.from('.project-row', {
+    y: 26,
+    opacity: 0,
+    duration: .7,
+    stagger: .1,
+    ease: 'expo.out',
+    scrollTrigger: { trigger: '.project-register', start: 'top 82%', once: true },
+  });
+
+  gsap.from('.capability-row', {
+    clipPath: 'inset(0 100% 0 0)',
+    duration: .85,
+    stagger: .09,
+    ease: 'expo.out',
+    scrollTrigger: { trigger: '.capability-matrix', start: 'top 78%', once: true },
+  });
+
+  gsap.from('.experience-list article', {
+    y: 24,
+    opacity: 0,
+    duration: .75,
+    stagger: .08,
+    ease: 'expo.out',
+    scrollTrigger: { trigger: '.experience-list', start: 'top 80%', once: true },
+  });
+
+  ScrollTrigger.create({
+    trigger: '[data-hero]',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: .5,
+    onUpdate: ({ progress }) => window.dispatchEvent(new CustomEvent('portfolio:hero-progress', { detail: progress })),
+  });
+}
