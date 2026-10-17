@@ -88,15 +88,15 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .hero-scene.is-webgl-ready .hero-canvas { opacity: 1; }
 .fallback-object { position: absolute; inset: 13% 5% 10%; perspective: 900px; transition: opacity .3s ease; }
 .hero-scene.is-webgl-ready .fallback-object { opacity: 0; }
-.fallback-backplane { position: absolute; inset: 22% 4% 18%; display: block; border: 1px solid rgba(213,222,230,.18); background: #10161c; box-shadow: 24px 30px 64px rgba(0,0,0,.3); transform: rotateX(58deg) rotateZ(-8deg); transform-style: preserve-3d; }
-.fallback-module { position: absolute; z-index: 2; display: block; width: 18%; border: 1px solid rgba(213,222,230,.27); background: #171e26; box-shadow: 12px 18px 28px rgba(0,0,0,.25); transform: skewY(-6deg); }
+.fallback-backplane { position: absolute; inset: 20% 5% 16%; display: block; border: 0; border-radius: 8px; background: #10161c; box-shadow: 24px 30px 64px rgba(0,0,0,.34); transform: rotateX(58deg) rotateZ(-6deg); transform-style: preserve-3d; }
+.fallback-module { position: absolute; z-index: 2; display: block; border: 1px solid rgba(213,222,230,.27); background: #171e26; transform: skewY(-4deg); }
 .fallback-module::after { position: absolute; top: 14%; left: 14%; width: 42%; height: 2px; background: var(--blue-bright); content: ""; }
-.fallback-product { top: 43%; left: 9%; height: 23%; }
-.fallback-interface { top: 29%; left: 31%; height: 34%; }
-.fallback-systems { top: 37%; left: 54%; height: 28%; }
-.fallback-operation { top: 24%; left: 76%; height: 37%; }
+.fallback-product { top: 40%; left: 8%; width: 18%; height: 27%; }
+.fallback-interface { top: 21%; left: 31%; width: 30%; height: 47%; border-color: rgba(155,173,210,.48); background: #17222c; }
+.fallback-systems { top: 31%; left: 67%; width: 20%; height: 38%; }
+.fallback-operation { top: 66%; left: 65%; width: 20%; height: 20%; }
 .fallback-operation::after { background: var(--brass); }
-.fallback-flow { position: absolute; z-index: 3; top: 70%; left: 14%; width: 69%; height: 1px; display: block; background: var(--blue-bright); transform: rotateZ(-4deg); }
+.fallback-flow { position: absolute; z-index: 3; top: 72%; left: 17%; width: 61%; height: 1px; display: block; background: var(--blue-bright); transform: rotateZ(-3deg); }
 .fallback-flow::before, .fallback-flow::after { position: absolute; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue-bright); content: ""; }
 .fallback-flow::before { left: 31%; }
 .fallback-flow::after { left: 67%; background: var(--brass); }
