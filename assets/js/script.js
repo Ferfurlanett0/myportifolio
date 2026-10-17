@@ -57,7 +57,6 @@ if (!reduceMotion.matches && window.gsap && window.ScrollTrigger) {
     .from('.hero h1', { y: compactMotion ? 26 : 42, opacity: 0, filter: compactMotion ? 'none' : 'blur(6px)', duration: compactMotion ? .62 : .82 }, '-=.28')
     .from('.hero-description', { y: 16, opacity: 0, duration: .52 }, '-=.5')
     .from('.hero-actions, .hero-links', { y: 12, opacity: 0, duration: .46, stagger: .06 }, '-=.38')
-    .from('[data-hero-visual]', { scale: .96, opacity: 0, filter: compactMotion ? 'none' : 'blur(7px)', duration: .78 }, '-=.68')
     .from('.discipline-rail > div', { y: 12, opacity: 0, duration: .42, stagger: .045 }, '-=.52');
 
   gsap.utils.toArray('[data-case-study]').forEach((study) => {
@@ -104,11 +103,4 @@ if (!reduceMotion.matches && window.gsap && window.ScrollTrigger) {
     scrollTrigger: { trigger: '.experience-list', start: 'top 80%', once: true },
   });
 
-  ScrollTrigger.create({
-    trigger: '[data-hero]',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: .5,
-    onUpdate: ({ progress }) => window.dispatchEvent(new CustomEvent('portfolio:hero-progress', { detail: progress })),
-  });
 }
