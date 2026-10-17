@@ -13,10 +13,8 @@ myportifolio/
 │   ├── icons/                         # Ícones locais das tecnologias
 │   ├── images/
 │   │   └── projects/                  # Imagens dos projetos
-│   ├── js/
-│   │   └── hero/                      # Cena Three.js e ciclo de renderização
-│   └── vendor/
-│       └── three/                     # Three.js 0.185.1 fixado localmente
+│   ├── js/                            # Navegação, estados e animações
+│   └── vendor/                        # Dependências locais versionadas
 └── docs/
     ├── design/                        # Referências visuais
     └── PRD-redesign-portfolio.md      # Requisitos do redesign
@@ -24,7 +22,7 @@ myportifolio/
 
 ## Desenvolvimento local
 
-O projeto não possui etapa de compilação. Como a Hero utiliza módulos ES, sirva a raiz por HTTP em vez de abrir o `index.html` por `file://`.
+O projeto não possui etapa de compilação. Sirva a raiz por HTTP para reproduzir o comportamento publicado.
 
 ```powershell
 python -m http.server 4173 --bind 127.0.0.1

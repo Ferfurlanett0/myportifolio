@@ -61,14 +61,14 @@ components:
 
 **Creative North Star: "O Sistema Implantável"**
 
-O portfólio se comporta como um fluxo contínuo entre produto, interface, sistemas e operação. Uma única fita técnica percorre essas quatro etapas e cria uma assinatura autoral sem transformar a página em um cenário literal de infraestrutura.
+O portfólio apresenta produto, interface, sistemas e operação como partes de uma mesma prática profissional. A assinatura vem da escala tipográfica, do ritmo editorial e da clareza dos projetos, sem depender de uma ilustração hero.
 
-A linguagem é editorial, assimétrica e deliberadamente contida. O 3D é a peça autoral; o restante da página oferece silêncio, hierarquia e evidência para que os projetos permaneçam no centro.
+A linguagem é editorial, assimétrica e deliberadamente contida. Tipografia, espaço, hierarquia e evidência mantêm os projetos no centro.
 
 **Key Characteristics:**
 
 - Composição ampla com linhas técnicas finas e poucas superfícies fechadas.
-- Uma escultura 3D contínua, com seleção direta e movimento que explica relações.
+- Hero tipográfica ampla, com descrição e ações organizadas como uma abertura editorial.
 - Projetos apresentados por contexto, decisão e resultado funcional.
 - Cor de destaque rara e funcional.
 
@@ -78,17 +78,17 @@ A paleta combina camadas contínuas de grafite azulado com texto mineral e um az
 
 ### Primary
 
-- **Azul de Engenharia:** informação técnica secundária e linhas da cena.
-- **Azul de Inspeção:** ações principais, foco e detalhes do objeto 3D.
+- **Azul de Engenharia:** informação técnica secundária e linhas de estrutura.
+- **Azul de Inspeção:** ações principais, foco e ênfase tipográfica.
 
 ### Secondary
 
-- **Latão Fosco:** pequenas marcações materiais dentro da cena 3D.
+- **Latão Fosco:** pequenas marcações editoriais.
 - **Verde Operacional:** somente para disponibilidade e sincronização confirmadas.
 
 ### Neutral
 
-- **Grafite Profundo:** hero, navegação, rodapé e corpo da escultura 3D.
+- **Grafite Profundo:** hero, navegação e rodapé.
 - **Texto Mineral:** texto principal sem recorrer ao branco puro.
 - **Grafite Editorial:** superfície principal dos estudos de caso.
 - **Grafite Operacional:** separação da trajetória sem recorrer a cartões.
@@ -114,17 +114,17 @@ A paleta combina camadas contínuas de grafite azulado com texto mineral e um az
 
 ## Layout
 
-O conteúdo ocupa até 1280px com margens responsivas. Hero e estudos de caso usam divisões assimétricas; capacidades e projetos menores usam linhas e colunas, não grades de cartões idênticos. Aos 900px, as composições viram uma coluna. Aos 620px, espaçamento, tipografia e detalhes são reduzidos sem alterar a ordem narrativa.
+O conteúdo ocupa até 1280px com margens responsivas. A hero usa uma abertura tipográfica assimétrica; os estudos de caso combinam texto e imagem. Capacidades e projetos menores usam linhas e colunas, não grades de cartões idênticos. Aos 900px, as composições viram uma coluna. Aos 620px, espaçamento, tipografia e detalhes são reduzidos sem alterar a ordem narrativa.
 
 ## Elevation & Depth
 
-A interface é plana por padrão. Profundidade vem de contraste tonal, recorte fotográfico e da geometria real do Three.js. Sombras aparecem somente sob elementos que simulam um objeto físico elevado e sempre possuem deslocamento perceptível.
+A interface é plana por padrão. Profundidade vem de contraste tonal e recorte fotográfico. Sombras aparecem somente sob elementos que simulam um objeto físico elevado e sempre possuem deslocamento perceptível.
 
 **The Defined Edge Rule.** Linhas ou sombra definem um plano; nunca as duas competem para criar uma caixa genérica.
 
 ## Shapes
 
-Seções e listas permanecem ortogonais. Controles usam cantos quase retos; o arredondamento suave fica reservado ao objeto 3D para sugerir material usinado. Círculos são usados apenas para estados pontuais reais.
+Seções e listas permanecem ortogonais. Controles usam cantos quase retos. Círculos são usados apenas para estados pontuais reais.
 
 ## Components
 
@@ -146,9 +146,9 @@ Seções e listas permanecem ortogonais. Controles usam cantos quase retos; o ar
 
 Barra grafite fixa, links compactos e indicador linear. Em telas pequenas, o conteúdo ocupa a viewport e preserva a ordem do documento.
 
-### Continuous Build Loop
+### Hero editorial
 
-Escultura Three.js formada por uma fita metálica contínua e quatro estações discretas: produto, interface, sistemas e operação. O cursor inclina a peça na mesma direção do movimento, cada estação revela seu papel no processo e dois sinais percorrem o ciclo sem transformar o hero em um diagrama literal. O fallback responsivo preserva a mesma forma contínua.
+Abertura tipográfica em uma única composição. O título ocupa a maior área visual; descrição, ações e perfis profissionais formam uma segunda camada de leitura sem competir com a mensagem principal.
 
 ## Do's and Don'ts
 
@@ -162,4 +162,4 @@ Escultura Three.js formada por uma fita metálica contínua e quatro estações 
 
 - **Don't** usar texto em degradê, halos neon ou vidro borrado como decoração.
 - **Don't** converter toda informação em cartões equivalentes.
-- **Don't** deixar o 3D impedir leitura, navegação, carregamento ou movimento reduzido.
+- **Don't** preencher espaço com ilustrações que não acrescentem informação.
