@@ -61,14 +61,14 @@ components:
 
 **Creative North Star: "O Sistema Implantável"**
 
-O portfólio se comporta como um objeto de engenharia que se desdobra. Um núcleo compacto abre camadas de produto, código, infraestrutura e trajetória, criando uma assinatura técnica sem transformar a página em um cenário de ficção científica.
+O portfólio se comporta como uma arquitetura de produto em funcionamento. Quatro módulos conectados tornam visível o caminho entre produto, interface, sistemas e operação, criando uma assinatura técnica sem transformar a página em um cenário de ficção científica.
 
 A linguagem é editorial, assimétrica e deliberadamente contida. O 3D é a peça autoral; o restante da página oferece silêncio, hierarquia e evidência para que os projetos permaneçam no centro.
 
 **Key Characteristics:**
 
 - Composição ampla com linhas técnicas finas e poucas superfícies fechadas.
-- Uma interação 3D memorável, apoiada por movimento seletivo.
+- Uma arquitetura 3D memorável, com seleção direta e movimento que explica relações.
 - Projetos apresentados por contexto, decisão e resultado funcional.
 - Cor de destaque rara e funcional.
 
@@ -88,7 +88,7 @@ A paleta combina camadas contínuas de grafite azulado com texto mineral e um az
 
 ### Neutral
 
-- **Grafite Profundo:** hero, navegação, rodapé e núcleo 3D.
+- **Grafite Profundo:** hero, navegação, rodapé e base da arquitetura 3D.
 - **Texto Mineral:** texto principal sem recorrer ao branco puro.
 - **Grafite Editorial:** superfície principal dos estudos de caso.
 - **Grafite Operacional:** separação da trajetória sem recorrer a cartões.
@@ -146,9 +146,9 @@ Seções e listas permanecem ortogonais. Controles usam cantos quase retos; o ar
 
 Barra grafite fixa, links compactos e indicador linear. Em telas pequenas, o conteúdo ocupa a viewport e preserva a ordem do documento.
 
-### Deployable Core
+### Living Architecture
 
-Objeto Three.js formado por núcleo, placas articuladas e uma folha técnica facetada. Responde ao cursor com rotação contida e se monta uma única vez na entrada; o fallback mantém a mesma silhueta sem carregar a arte antiga.
+Objeto Three.js formado por quatro módulos especializados ligados por um fluxo contínuo: produto, interface, sistemas e operação. O cursor inclina a composição, seleciona módulos de verdade e revela o papel de cada camada; sinais em movimento comunicam continuidade sem virar decoração. A entrada é montada em sequência e o fallback responsivo preserva a mesma arquitetura.
 
 ## Do's and Don'ts
 
