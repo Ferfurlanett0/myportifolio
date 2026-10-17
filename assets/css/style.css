@@ -86,20 +86,17 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .hero-scene.is-inspecting { cursor: crosshair; }
 .hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .45s ease; }
 .hero-scene.is-webgl-ready .hero-canvas { opacity: 1; }
-.fallback-object { position: absolute; inset: 13% 5% 10%; perspective: 900px; transition: opacity .3s ease; }
+.fallback-object { position: absolute; inset: 12% 6% 10%; perspective: 900px; transition: opacity .3s ease; }
 .hero-scene.is-webgl-ready .fallback-object { opacity: 0; }
-.fallback-backplane { position: absolute; inset: 20% 5% 16%; display: block; border: 0; border-radius: 8px; background: #10161c; box-shadow: 24px 30px 64px rgba(0,0,0,.34); transform: rotateX(58deg) rotateZ(-6deg); transform-style: preserve-3d; }
-.fallback-module { position: absolute; z-index: 2; display: block; border: 1px solid rgba(213,222,230,.27); background: #171e26; transform: skewY(-4deg); }
-.fallback-module::after { position: absolute; top: 14%; left: 14%; width: 42%; height: 2px; background: var(--blue-bright); content: ""; }
-.fallback-product { top: 40%; left: 8%; width: 18%; height: 27%; }
-.fallback-interface { top: 21%; left: 31%; width: 30%; height: 47%; border-color: rgba(155,173,210,.48); background: #17222c; }
-.fallback-systems { top: 31%; left: 67%; width: 20%; height: 38%; }
-.fallback-operation { top: 66%; left: 65%; width: 20%; height: 20%; }
-.fallback-operation::after { background: var(--brass); }
-.fallback-flow { position: absolute; z-index: 3; top: 72%; left: 17%; width: 61%; height: 1px; display: block; background: var(--blue-bright); transform: rotateZ(-3deg); }
-.fallback-flow::before, .fallback-flow::after { position: absolute; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue-bright); content: ""; }
-.fallback-flow::before { left: 31%; }
-.fallback-flow::after { left: 67%; background: var(--brass); }
+.fallback-loop { position: absolute; top: 27%; width: 48%; height: 42%; display: block; border: 3px solid #43515e; border-radius: 50%; }
+.fallback-loop-left { left: 8%; transform: rotate(-16deg); }
+.fallback-loop-right { right: 8%; transform: rotate(16deg); }
+.fallback-loop-accent { position: absolute; top: 31%; left: 18%; width: 64%; height: 34%; display: block; border-top: 2px solid var(--blue-bright); border-bottom: 1px solid var(--brass); border-radius: 50%; transform: rotate(-4deg); }
+.fallback-node { position: absolute; z-index: 2; width: 11px; height: 11px; display: block; border: 2px solid var(--blue-bright); border-radius: 50%; background: var(--night); }
+.fallback-node-a { top: 28%; left: 24%; border-color: var(--green); }
+.fallback-node-b { top: 42%; left: 48%; }
+.fallback-node-c { right: 22%; bottom: 27%; }
+.fallback-node-d { right: 12%; top: 33%; border-color: var(--brass); }
 .discipline-rail { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); }
 .discipline-rail div { display: grid; grid-template-columns: 34px 1fr; grid-template-rows: auto auto; column-gap: 10px; padding: 28px 20px 30px 0; border-right: 1px solid var(--line-dark); }
 .discipline-rail div:not(:first-child) { padding-left: 28px; }

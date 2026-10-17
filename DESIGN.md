@@ -61,14 +61,14 @@ components:
 
 **Creative North Star: "O Sistema Implantável"**
 
-O portfólio se comporta como uma arquitetura de produto em funcionamento. Quatro módulos conectados tornam visível o caminho entre produto, interface, sistemas e operação, criando uma assinatura técnica sem transformar a página em um cenário de ficção científica.
+O portfólio se comporta como um fluxo contínuo entre produto, interface, sistemas e operação. Uma única fita técnica percorre essas quatro etapas e cria uma assinatura autoral sem transformar a página em um cenário literal de infraestrutura.
 
 A linguagem é editorial, assimétrica e deliberadamente contida. O 3D é a peça autoral; o restante da página oferece silêncio, hierarquia e evidência para que os projetos permaneçam no centro.
 
 **Key Characteristics:**
 
 - Composição ampla com linhas técnicas finas e poucas superfícies fechadas.
-- Uma arquitetura 3D memorável, com seleção direta e movimento que explica relações.
+- Uma escultura 3D contínua, com seleção direta e movimento que explica relações.
 - Projetos apresentados por contexto, decisão e resultado funcional.
 - Cor de destaque rara e funcional.
 
@@ -88,7 +88,7 @@ A paleta combina camadas contínuas de grafite azulado com texto mineral e um az
 
 ### Neutral
 
-- **Grafite Profundo:** hero, navegação, rodapé e base da arquitetura 3D.
+- **Grafite Profundo:** hero, navegação, rodapé e corpo da escultura 3D.
 - **Texto Mineral:** texto principal sem recorrer ao branco puro.
 - **Grafite Editorial:** superfície principal dos estudos de caso.
 - **Grafite Operacional:** separação da trajetória sem recorrer a cartões.
@@ -146,9 +146,9 @@ Seções e listas permanecem ortogonais. Controles usam cantos quase retos; o ar
 
 Barra grafite fixa, links compactos e indicador linear. Em telas pequenas, o conteúdo ocupa a viewport e preserva a ordem do documento.
 
-### Living Architecture
+### Continuous Build Loop
 
-Objeto Three.js formado por quatro módulos especializados ligados por um fluxo contínuo: produto, interface, sistemas e operação. O cursor inclina a composição, seleciona módulos de verdade e revela o papel de cada camada; sinais em movimento comunicam continuidade sem virar decoração. A entrada é montada em sequência e o fallback responsivo preserva a mesma arquitetura.
+Escultura Three.js formada por uma fita metálica contínua e quatro estações discretas: produto, interface, sistemas e operação. O cursor inclina a peça na mesma direção do movimento, cada estação revela seu papel no processo e dois sinais percorrem o ciclo sem transformar o hero em um diagrama literal. O fallback responsivo preserva a mesma forma contínua.
 
 ## Do's and Don'ts
 
