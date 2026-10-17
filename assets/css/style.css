@@ -82,17 +82,24 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .visual-label, .visual-note { position: absolute; z-index: 5; right: 0; left: 0; display: flex; justify-content: space-between; color: #858c90; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
 .visual-label { top: 18px; }
 .visual-note { bottom: 18px; }
-.hero-scene { position: absolute; inset: 44px -7vw 44px -5vw; }
+.hero-scene { position: absolute; inset: 44px -7vw 44px -5vw; cursor: default; }
+.hero-scene.is-inspecting { cursor: crosshair; }
 .hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .45s ease; }
 .hero-scene.is-webgl-ready .hero-canvas { opacity: 1; }
-.fallback-object { position: absolute; inset: 8% 3% 6%; perspective: 900px; transition: opacity .3s ease; }
+.fallback-object { position: absolute; inset: 13% 5% 10%; perspective: 900px; transition: opacity .3s ease; }
 .hero-scene.is-webgl-ready .fallback-object { opacity: 0; }
-.fallback-object i { position: absolute; display: block; border: 1px solid rgba(218,222,224,.22); background: #151a1e; transform-style: preserve-3d; }
-.fallback-core { top: 27%; left: 42%; width: 29%; height: 46%; box-shadow: 28px 34px 70px rgba(0,0,0,.32); transform: rotateX(63deg) rotateZ(-35deg); }
-.fallback-plate { width: 30%; height: 38%; background: #20262a !important; }
-.fallback-plate-a { top: 20%; left: 18%; transform: rotateX(62deg) rotateZ(-35deg) translateZ(-14px); }
-.fallback-plate-b { right: 7%; bottom: 14%; transform: rotateX(62deg) rotateZ(-35deg) translateZ(14px); }
-.fallback-axis { top: 51%; left: 20%; width: 67%; height: 2px; border: 0 !important; background: var(--blue) !important; transform: rotateZ(-8deg); }
+.fallback-backplane { position: absolute; inset: 22% 4% 18%; display: block; border: 1px solid rgba(213,222,230,.18); background: #10161c; box-shadow: 24px 30px 64px rgba(0,0,0,.3); transform: rotateX(58deg) rotateZ(-8deg); transform-style: preserve-3d; }
+.fallback-module { position: absolute; z-index: 2; display: block; width: 18%; border: 1px solid rgba(213,222,230,.27); background: #171e26; box-shadow: 12px 18px 28px rgba(0,0,0,.25); transform: skewY(-6deg); }
+.fallback-module::after { position: absolute; top: 14%; left: 14%; width: 42%; height: 2px; background: var(--blue-bright); content: ""; }
+.fallback-product { top: 43%; left: 9%; height: 23%; }
+.fallback-interface { top: 29%; left: 31%; height: 34%; }
+.fallback-systems { top: 37%; left: 54%; height: 28%; }
+.fallback-operation { top: 24%; left: 76%; height: 37%; }
+.fallback-operation::after { background: var(--brass); }
+.fallback-flow { position: absolute; z-index: 3; top: 70%; left: 14%; width: 69%; height: 1px; display: block; background: var(--blue-bright); transform: rotateZ(-4deg); }
+.fallback-flow::before, .fallback-flow::after { position: absolute; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue-bright); content: ""; }
+.fallback-flow::before { left: 31%; }
+.fallback-flow::after { left: 67%; background: var(--brass); }
 .discipline-rail { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); }
 .discipline-rail div { display: grid; grid-template-columns: 34px 1fr; grid-template-rows: auto auto; column-gap: 10px; padding: 28px 20px 30px 0; border-right: 1px solid var(--line-dark); }
 .discipline-rail div:not(:first-child) { padding-left: 28px; }
